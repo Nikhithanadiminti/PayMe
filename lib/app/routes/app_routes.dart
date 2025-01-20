@@ -11,6 +11,7 @@ abstract class Routes {
   static const PROFILE_EDIT_DETAILS = _Paths.PROFILE_EDIT_DETAILS;
   static const FINANCIAL_DETAILS = _Paths.FINANCIAL_DETAILS;
   static const ADDITIONAL_DETAILS = _Paths.ADDITIONAL_DETAILS;
+  static const ADD_ADDRESS = _Paths.ADD_ADDRESS;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const PROFILE_EDIT_DETAILS = '/profile-edit-details';
   static const FINANCIAL_DETAILS = '/financial-details';
   static const ADDITIONAL_DETAILS = '/additional-details';
+  static const ADD_ADDRESS = '/add-address';
 }

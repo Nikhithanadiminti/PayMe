@@ -1,3 +1,4 @@
+import 'package:demo_project/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -60,7 +61,7 @@ class OtpVerificationView extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  Get.to(() => ProfileView());
+                  Get.to(() => DashboardView());
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF007f97),

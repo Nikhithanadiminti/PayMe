@@ -23,7 +23,7 @@ class LoginView extends StatelessWidget {
 
                 // // PhonePe Logo
                 // Image.asset(
-                //   'images/payglogo.jpg',
+                //   'assets/images/payglogo.jpg',
                 //   width: 50,
                 //   height: 50,
                 // ),

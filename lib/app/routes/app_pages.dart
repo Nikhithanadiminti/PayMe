@@ -2,12 +2,18 @@ import 'package:get/get.dart';
 
 import '../modules/Login/bindings/login_binding.dart';
 import '../modules/Login/views/login_view.dart';
-import '../modules/addAddress/bindings/add_address_binding.dart';
-import '../modules/addAddress/views/add_address_view.dart';
+import '../modules/add_upi_id/bindings/add_upi_id_binding.dart';
+import '../modules/add_upi_id/views/add_upi_id_view.dart';
 import '../modules/additionalDetails/bindings/additional_details_binding.dart';
 import '../modules/additionalDetails/views/additional_details_view.dart';
+import '../modules/dashboard/bindings/dashboard_binding.dart';
+import '../modules/dashboard/views/dashboard_view.dart';
 import '../modules/financialDetails/bindings/financial_details_binding.dart';
 import '../modules/financialDetails/views/financial_details_view.dart';
+import '../modules/footer/bindings/footer_binding.dart';
+import '../modules/footer/views/footer_view.dart';
+import '../modules/header/bindings/header_binding.dart';
+import '../modules/header/views/header_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/otpVerification/bindings/otp_verification_binding.dart';
@@ -18,6 +24,8 @@ import '../modules/profileDetails/bindings/profile_details_binding.dart';
 import '../modules/profileDetails/views/profile_details_view.dart';
 import '../modules/profileEditDetails/bindings/profile_edit_details_binding.dart';
 import '../modules/profileEditDetails/views/profile_edit_details_view.dart';
+import '../modules/qr_code_scanner/bindings/qr_code_scanner_binding.dart';
+import '../modules/qr_code_scanner/views/qr_code_scanner_view.dart';
 
 part 'app_routes.dart';
 
@@ -68,9 +76,34 @@ class AppPages {
       binding: AdditionalDetailsBinding(),
     ),
     GetPage(
-      name: _Paths.ADD_ADDRESS,
-      page: () => const AddAddressView(),
-      binding: AddAddressBinding(),
+      name: _Paths.DASHBOARD,
+      page: () => const DashboardView(),
+      binding: DashboardBinding(),
     ),
+    GetPage(
+      name: _Paths.HEADER,
+      page: () => const HeaderView(),
+      binding: HeaderBinding(),
+    ),
+    GetPage(
+      name: _Paths.FOOTER,
+      page: () => const FooterView(),
+      binding: FooterBinding(),
+    ),
+    GetPage(
+      name: _Paths.FOOTER,
+      page: () => const FooterView(),
+      binding: FooterBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_UPI_ID,
+      page: () => const AddUpiIdView(),
+      binding: AddUpiIdBinding(),
+    ),
+    // GetPage(
+    //   name: _Paths.QR_CODE_SCANNER,
+    //   page: () => const QrCodeScannerView(),
+    //   binding: QrCodeScannerBinding(),
+    // ),
   ];
 }

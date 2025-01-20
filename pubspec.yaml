@@ -37,6 +37,9 @@ dependencies:
   get: ^4.6.6
   flutter_screenutil: ^5.9.3
   dotted_border: ^2.1.0
+  permission_handler: ^11.3.1
+#  mobile_scanner: ^6.0.3
+#  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:
@@ -62,8 +65,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - images/payglogo.jpg
-   - images/help_icon.png
+   - assets/images/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

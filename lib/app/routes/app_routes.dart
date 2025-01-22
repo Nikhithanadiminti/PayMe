@@ -22,6 +22,8 @@ abstract class Routes {
   static const ADD_UPI_NUMBER = _Paths.ADD_UPI_NUMBER;
   static const ADD_UPI_ID = _Paths.ADD_UPI_ID;
   // static const QR_CODE_SCANNER = _Paths.QR_CODE_SCANNER;
+  static const QUESTIONNAIRE = _Paths.QUESTIONNAIRE;
+  static const TO_MOBILE_NUMBER = _Paths.TO_MOBILE_NUMBER;
 }
 
 abstract class _Paths {
@@ -46,4 +48,6 @@ abstract class _Paths {
   static const ADD_UPI_NUMBER = '/add-upi-number';
   static const ADD_UPI_ID = '/add-upi-id';
   // static const QR_CODE_SCANNER = '/qr-code-scanner';
+  static const QUESTIONNAIRE = '/questionnaire';
+  static const TO_MOBILE_NUMBER = '/to-mobile-number';
 }

@@ -26,6 +26,10 @@ import '../modules/profileEditDetails/bindings/profile_edit_details_binding.dart
 import '../modules/profileEditDetails/views/profile_edit_details_view.dart';
 import '../modules/qr_code_scanner/bindings/qr_code_scanner_binding.dart';
 import '../modules/qr_code_scanner/views/qr_code_scanner_view.dart';
+import '../modules/questionnaire/bindings/questionnaire_binding.dart';
+import '../modules/questionnaire/views/questionnaire_view.dart';
+import '../modules/toMobileNumber/bindings/to_mobile_number_binding.dart';
+import '../modules/toMobileNumber/views/to_mobile_number_view.dart';
 
 part 'app_routes.dart';
 
@@ -105,5 +109,15 @@ class AppPages {
     //   page: () => const QrCodeScannerView(),
     //   binding: QrCodeScannerBinding(),
     // ),
+    GetPage(
+      name: _Paths.QUESTIONNAIRE,
+      page: () => const QuestionnaireView(),
+      binding: QuestionnaireBinding(),
+    ),
+    GetPage(
+      name: _Paths.TO_MOBILE_NUMBER,
+      page: () => const ToMobileNumberView(),
+      binding: ToMobileNumberBinding(),
+    ),
   ];
 }

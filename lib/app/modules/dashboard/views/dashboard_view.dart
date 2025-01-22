@@ -1,5 +1,6 @@
 import 'package:demo_project/app/modules/footer/views/footer_view.dart';
 import 'package:demo_project/app/modules/header/views/header_view.dart';
+import 'package:demo_project/app/modules/toMobileNumber/views/to_mobile_number_view.dart';
 import 'package:demo_project/app/modules/to_bank_upi_id/views/to_bank_upi_id_view.dart';
 import 'package:demo_project/app/modules/to_self_account/views/to_self_account_view.dart';
 import 'package:flutter/material.dart';
@@ -70,7 +71,7 @@ class DashboardView extends GetView<DashboardController> {
                                 icon: Icons.person,
                                 label: 'To Mobile\nNumber',
                                 onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(() => const ToMobileNumberView());
                                 },
                                 notificationDot: true,
 
@@ -100,73 +101,6 @@ class DashboardView extends GetView<DashboardController> {
                           ),
 
 
-                          const SizedBox(height: 16),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.black, // Border color
-                                    width: 1, // Border width
-                                  ),
-                                  borderRadius: BorderRadius.circular(8), // Rounded corners
-                                ),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      'UPI Lite: ',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.black,
-                                      ),
-                                    ),
-                                    Text(
-                                      'Try Now',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xFF007f97),
-                                      ),
-                                    ),
-                                  ],
-
-                                ),
-                              ),
-
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.black, // Border color
-                                    width: 1, // Border width
-                                  ),
-                                  borderRadius: BorderRadius.circular(8), // Rounded corners
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.qr_code,
-                                      color: Colors.black,
-                                      size: 20,
-                                    ),
-                                    SizedBox(width: 4),
-                                    Text(
-                                      'UPI ID: obulakiran...',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.black,
-                                      ),
-                                    ),
-                                    Icon(Icons.keyboard_arrow_right ,
-                                      color: Colors.black,
-                                      size: 15,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          )
 
 
                         ],
@@ -175,9 +109,84 @@ class DashboardView extends GetView<DashboardController> {
 
                   ],
                 ),
+                SizedBox(height: 16),
+
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/light_background_color.png'), // Replace with your image path
+                    fit: BoxFit.cover, // Use BoxFit to control how the image fits within the container
+                  ), // Background color
+                  borderRadius: BorderRadius.circular(12), // Border radius
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween, // Spacing the text to left and right
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'UPI Lite: ', // Text part "UPI Lite:"
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black, // Black color for "UPI Lite"
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Try Now', // Text part "Try Now"
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF007f97), // Blue color for "Try Now"
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 20, // Set a specific height for the container that holds the divider
+                      child: VerticalDivider(
+                        color: Color(0xFFCCCCCC), // Color of the divider line
+                        thickness: 3, // Thickness of the divider
+                       // Space from the bottom of the row
+                      ),
+                    ),
 
 
-                SizedBox(height: 8,),
+                    GestureDetector(
+                      onTap: () {
+                        // Add your action for "Try Now" here
+                      },
+
+                      child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.qr_code,
+                                    color: Colors.black,
+                                    size: 16,
+                                  ),
+                                  SizedBox(width: 4),
+                          Text(
+                              'UPI ID: 9494261033@ybl',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black, // Text color
+                              ),
+                          ),
+]
+                      )
+                    ),
+                  ],
+                ),
+              ),
+
+
+
+                SizedBox(height: 16),
 
                 Row(
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -203,14 +212,14 @@ class DashboardView extends GetView<DashboardController> {
 
                        ),
                        child: Padding(
-                         padding: const EdgeInsets.only(top: 4,left: 8,right: 8,bottom: 4),
+                         padding: const EdgeInsets.only(top: 10,left: 15,right: 15,bottom: 10),
                          child: Row(
                            children: [
                              Icon(Icons.account_balance_wallet,color: Color(0xFF007f97),),
 
                              SizedBox(width: 8,),
                              Text(
-                                 'WePay\nWallet'
+                                 'PayMe\nWallet'
 
 
                              )
@@ -239,7 +248,7 @@ class DashboardView extends GetView<DashboardController> {
 
                      ),
                      child: Padding(
-                       padding: const EdgeInsets.only(top: 4,left: 8,right: 8,bottom: 4),                       child: Row(
+                       padding: const EdgeInsets.only(top: 10,left: 15,right: 15,bottom: 10),                       child: Row(
 
                          children: [
                            Icon(Icons.card_giftcard,color: Color(0xFF007f97),),
@@ -272,7 +281,7 @@ class DashboardView extends GetView<DashboardController> {
 
                      ),
                      child: Padding(
-                       padding: const EdgeInsets.only(top: 4,left: 8,right: 8,bottom: 4),
+                       padding: const EdgeInsets.only(top: 10,left: 15,right: 15,bottom: 10),
                        child: Row(
 
                          children: [
@@ -290,7 +299,7 @@ class DashboardView extends GetView<DashboardController> {
                  ],
                ),
 
-              SizedBox(height: 8,),
+              SizedBox(height: 16),
 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -301,7 +310,10 @@ class DashboardView extends GetView<DashboardController> {
                     width: double.infinity,
                     padding: EdgeInsets.all(16.00),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/light_background_color.png'), // Replace with your image path
+                        fit: BoxFit.cover, // Use BoxFit to control how the image fits within the container
+                      ),
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
@@ -424,9 +436,125 @@ class DashboardView extends GetView<DashboardController> {
 
                 ],
               ),
+              SizedBox(height: 16),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(16.00),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Educational Fees',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(4),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 4,
+                                    offset: Offset(0, 1),
+                                  ),
+                                ],
+                              ),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Get.toNamed('/educationalRoute'); // Use appropriate route for educational fees page
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(
+                                        'View All',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          color: Color(0xFF007f97),
+                                        ),
+                                      ),
+                                      SizedBox(width: 4),
+                                      Icon(
+                                        Icons.arrow_right_alt_outlined,
+                                        size: 16,
+                                        color: Color(0xFF007f97),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            _buildNavigableIcon1(
+                              icon: Icons.school,
+                              label: 'Tuition Fees',
+                              onTap: () {
+                                // Add your action for Tuition Fees
+                              },
+                            ),
+                            _buildNavigableIcon1(
+                              icon: Icons.book,
+                              label: 'Exam Fees',
+                              onTap: () {
+                                // Add your action for Exam Fees
+                              },
+                            ),
+                            _buildNavigableIcon1(
+                              icon: Icons.money_off,
+                              label: 'Scholarship',
+                              onTap: () {
+                                // Add your action for Scholarships
+                              },
+                            ),
+                            _buildNavigableIcon1(
+                              icon: Icons.account_balance_wallet,
+                              label: 'Fee Payments',
+                              onTap: () {
+                                // Add your action for Fee Payments
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
 
 
-              SizedBox(height: 8),
+              SizedBox(height: 16),
 
 
               Column(
@@ -438,7 +566,10 @@ class DashboardView extends GetView<DashboardController> {
                     width: double.infinity,
                     padding: EdgeInsets.all(16.00),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/light_background_color.png'), // Replace with your image path
+                        fit: BoxFit.cover, // Use BoxFit to control how the image fits within the container
+                      ),
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
@@ -563,7 +694,7 @@ class DashboardView extends GetView<DashboardController> {
               ),
 
 
-              SizedBox(height: 8,),
+              SizedBox(height: 16),
 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -699,7 +830,7 @@ class DashboardView extends GetView<DashboardController> {
               ),
 
 
-              SizedBox(height: 8,),
+              SizedBox(height: 16),
 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -710,7 +841,10 @@ class DashboardView extends GetView<DashboardController> {
                     width: double.infinity,
                     padding: EdgeInsets.all(16.00),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/light_background_color.png'), // Replace with your image path
+                        fit: BoxFit.cover, // Use BoxFit to control how the image fits within the container
+                      ),
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
@@ -835,7 +969,7 @@ class DashboardView extends GetView<DashboardController> {
               ),
 
 
-              SizedBox(height: 8,),
+              SizedBox(height: 16),
 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1033,7 +1167,7 @@ class DashboardView extends GetView<DashboardController> {
               ),
 
 
-              SizedBox(height: 8,),
+              SizedBox(height: 16),
 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1044,7 +1178,10 @@ class DashboardView extends GetView<DashboardController> {
                     width: double.infinity,
                     padding: EdgeInsets.all(16.00),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/light_background_color.png'), // Replace with your image path
+                        fit: BoxFit.cover, // Use BoxFit to control how the image fits within the container
+                      ),
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
@@ -1331,15 +1468,18 @@ class DashboardView extends GetView<DashboardController> {
           Stack(
             children: [
               Container(
-                width: 60,
-                height: 60,
+                width: 50,
+                height: 50,
                 decoration: BoxDecoration(
-                  color: Color(0xFF007f97), // Light white background
-                  borderRadius: BorderRadius.circular(12),
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/main_background_color.png'), // Replace with your image path
+                    fit: BoxFit.cover, // Use BoxFit to control how the image fits within the container
+                  ), // Light white background
+                  borderRadius: BorderRadius.circular(14),
                 ),
                 child: Icon(
                   icon,
-                  size: 30,
+                  size: 35,
                   color: Colors.white,
                 ),
               ),
@@ -1387,16 +1527,16 @@ class DashboardView extends GetView<DashboardController> {
         children: [
 
               Container(
-                width: 60,
+                width: 50,
 
-                height: 60,
+                height: 50,
                 decoration: BoxDecoration(
                   color: Colors.white, // Light white background
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(14),
                 ),
                 child: Icon(
                   icon,
-                  size: 30,
+                  size: 32,
                   color: Color(0xFF007f97),
                 ),
               ),

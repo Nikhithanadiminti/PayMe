@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   dotted_border: ^2.1.0
   permission_handler: ^11.3.1
+  curved_navigation_bar: ^1.0.6
 #  mobile_scanner: ^6.0.3
 #  image_picker: ^1.0.7
 

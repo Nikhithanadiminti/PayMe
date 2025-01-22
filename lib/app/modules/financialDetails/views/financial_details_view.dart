@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../questionnaire/views/questionnaire_view.dart';
 import '../controllers/financial_details_controller.dart';
 
 class FinancialDetailsView extends GetView<FinancialDetailsController> {
@@ -279,6 +280,8 @@ class FinancialDetailsView extends GetView<FinancialDetailsController> {
               onPressed: () {
                 // Define your button action here
                 print('$heading Add button pressed');
+                // Navigate to the QuestionnairePage (using GetX)
+                Get.to(() => QuestionnaireView());
               },
               child: Text(
                 'Add', // Button text
@@ -298,6 +301,7 @@ class FinancialDetailsView extends GetView<FinancialDetailsController> {
                 ),
               ),
             )
+
 
           ],
         ),

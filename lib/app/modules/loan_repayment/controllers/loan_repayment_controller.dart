@@ -9,8 +9,8 @@ class LoanRepaymentController extends GetxController {
 
   // Updated image paths
   final carouselImages = [
-    'images/loan_repayment2.jpg',
-    'images/loan_repayment1.webp',
+    'assets/images/loan_repayment2.jpg',
+    'assets/images/loan_repayment1.webp',
   ];
 
   late Timer autoScrollTimer;

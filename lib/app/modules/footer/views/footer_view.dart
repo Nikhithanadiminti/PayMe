@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
+import '../../transactions/views/transactions_view.dart';
 import '../controllers/footer_controller.dart';
 
 class FooterView extends GetView<FooterController> {
@@ -37,20 +38,15 @@ class FooterView extends GetView<FooterController> {
       onTap: (index) {
         // Handle actions based on the index of the tapped icon
         if (index == 0) {
-          // Home Button - Perform any action for Home, such as navigating or updating UI
-          controller.updateIndex(0); // Update the selected index
-          // You can add logic to navigate to the Home view if needed
+          controller.updateIndex(0);
           print("Home tapped");
         } else if (index == 1) {
-          // Scanner Button - Navigate to the QR Code Scanner screen
           controller.updateIndex(1); // Update the selected index
           // Get.to(() => QrCodeScannerView()); // Navigate to QR Code Scanner view
           print("Scanner tapped");
         } else if (index == 2) {
-          // History Button - Perform any action for History, such as navigating or updating UI
           controller.updateIndex(2); // Update the selected index
-          // You can add logic to navigate to the History view if needed
-          print("History tapped");
+           Get.to(() => TransactionsView());
         }
       },
       index: controller.selectedIndex.value, // Start with the correct selected index

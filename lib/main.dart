@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import 'app/modules/mobile_recharge/controllers/mobile_recharge_controller.dart';
 import 'app/routes/app_pages.dart';
 
 void main() {
@@ -21,6 +22,8 @@ void main() {
   Get.put(AddUpiIdController());
   Get.put(AddUpiNumberController());
   Get.put(QrCodeScannerController());
+  Get.put(MobileRechargeController());
+
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,

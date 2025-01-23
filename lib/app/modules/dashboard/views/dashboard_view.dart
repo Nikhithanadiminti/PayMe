@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
+import '../../loan_repayment/views/loan_repayment_view.dart';
+import '../../mobile_recharge/views/mobile_recharge_view.dart';
 import '../controllers/dashboard_controller.dart';
 
 
@@ -401,7 +403,7 @@ class DashboardView extends GetView<DashboardController> {
                               icon: Icons.phone_iphone,
                               label: 'Mobile\nRecharge',
                               onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
+                                 Get.to(() => MobileRechargeView());
                               },
 
                             ),
@@ -409,7 +411,7 @@ class DashboardView extends GetView<DashboardController> {
                               icon: Icons.money,
                               label: 'Loan/\nRepayment',
                               onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
+                                 Get.to(() => LoanRepaymentView());
                               },
                             ),
                             _buildNavigableIcon1(

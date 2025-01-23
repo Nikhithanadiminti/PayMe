@@ -14,6 +14,12 @@ abstract class Routes {
   static const DASHBOARD = _Paths.DASHBOARD;
   static const HEADER = _Paths.HEADER;
   static const FOOTER = _Paths.FOOTER;
+  static const TRANSACTIONS = _Paths.TRANSACTIONS;
+  static const DOWNLOAD = _Paths.DOWNLOAD;
+  static const HELP = _Paths.HELP;
+  static const FILTERS = _Paths.FILTERS;
+  static const MOBILE_RECHARGE = _Paths.MOBILE_RECHARGE;
+  static const LOAN_REPAYMENT = _Paths.LOAN_REPAYMENT;
   static const QRCODESCANNER = _Paths.QRCODESCANNER;
   static const TO_BANK_UPI_ID = _Paths.TO_BANK_UPI_ID;
   static const TO_SELF_ACCOUNT = _Paths.TO_SELF_ACCOUNT;
@@ -50,4 +56,11 @@ abstract class _Paths {
   // static const QR_CODE_SCANNER = '/qr-code-scanner';
   static const QUESTIONNAIRE = '/questionnaire';
   static const TO_MOBILE_NUMBER = '/to-mobile-number';
+
+  static const TRANSACTIONS = '/transactions';
+  static const DOWNLOAD = '/download';
+  static const HELP = '/help';
+  static const FILTERS = '/filters';
+  static const MOBILE_RECHARGE = '/mobile-recharge';
+  static const LOAN_REPAYMENT = '/loan-repayment';
 }

@@ -30,6 +30,13 @@ abstract class Routes {
   // static const QR_CODE_SCANNER = _Paths.QR_CODE_SCANNER;
   static const QUESTIONNAIRE = _Paths.QUESTIONNAIRE;
   static const TO_MOBILE_NUMBER = _Paths.TO_MOBILE_NUMBER;
+  static const CREDIT_CARD_REPAYMENT = _Paths.CREDIT_CARD_REPAYMENT;
+  static const RENT = _Paths.RENT;
+  static const BILLS_RECHARGES = _Paths.BILLS_RECHARGES;
+  static const BILLS_AND_RECHARGES = _Paths.BILLS_AND_RECHARGES;
+  static const PURCHASES = _Paths.PURCHASES;
+  static const TRAVEL = _Paths.TRAVEL;
+  static const TRANSIT_AND_FOOD = _Paths.TRANSIT_AND_FOOD;
 }
 
 abstract class _Paths {
@@ -63,4 +70,11 @@ abstract class _Paths {
   static const FILTERS = '/filters';
   static const MOBILE_RECHARGE = '/mobile-recharge';
   static const LOAN_REPAYMENT = '/loan-repayment';
+  static const CREDIT_CARD_REPAYMENT = '/credit-card-repayment';
+  static const RENT = '/rent';
+  static const BILLS_RECHARGES = '/bills-recharges';
+  static const BILLS_AND_RECHARGES = '/bills-and-recharges';
+  static const PURCHASES = '/purchases';
+  static const TRAVEL = '/travel';
+  static const TRANSIT_AND_FOOD = '/transit-and-food';
 }

@@ -28,11 +28,6 @@ class MobileRechargeView extends GetView<MobileRechargeController> {
             icon: Icon(Icons.help_outline),
             color: Colors.white,
             onPressed: () {
-              // Navigate to the Help screen
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => Help()),
-              // );
               Get.to(()=> MobileRechargeHelp());
             },
           ),
@@ -107,7 +102,7 @@ class MobileRechargeView extends GetView<MobileRechargeController> {
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
-                            hintText: "Search for any help topics",
+                            hintText: "Search by name or number",
                             border: InputBorder.none,
                           ),
                         ),
@@ -119,10 +114,6 @@ class MobileRechargeView extends GetView<MobileRechargeController> {
     // Recents section
     const SizedBox(height: 15),
 
-
-    // Recents list
-    //Obx(() {
-  //  return
             Container(
               margin: EdgeInsets.only(left: 10,right: 10),
               decoration: BoxDecoration(
@@ -246,17 +237,5 @@ class MobileRechargeView extends GetView<MobileRechargeController> {
     );
   }
 }
-// class Recent {
-//   final String name;
-//   final String number;
-//   final String lastRecharge;
-//   final String logo;
-//
-//   Recent({
-//     required this.name,
-//     required this.number,
-//     required this.lastRecharge,
-//     required this.logo,
-//   });
-// }
+
 

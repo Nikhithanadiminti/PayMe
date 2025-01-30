@@ -1,3 +1,6 @@
+// import 'package:demo_project/app/modules/bills_and_recharges/bindings/bills_recharges_binding.dart';
+// import 'package:demo_project/app/modules/bills_and_recharges/views/bills_recharges_view.dart';
+import 'package:demo_project/app/modules/bills_and_recharges/views/bills_and_recharges_view.dart';
 import 'package:demo_project/app/modules/footer/views/footer_view.dart';
 import 'package:demo_project/app/modules/header/views/header_view.dart';
 import 'package:demo_project/app/modules/toMobileNumber/views/to_mobile_number_view.dart';
@@ -8,8 +11,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
+import '../../credit_card_repayment/views/credit_card_repayment_view.dart';
 import '../../loan_repayment/views/loan_repayment_view.dart';
 import '../../mobile_recharge/views/mobile_recharge_view.dart';
+import '../../purchases/views/purchases_view.dart';
+import '../../rent/views/rent_view.dart';
+import '../../transit_and_food/views/transit_and_food_view.dart';
+import '../../travel/views/travel_view.dart';
 import '../controllers/dashboard_controller.dart';
 
 
@@ -364,7 +372,7 @@ class DashboardView extends GetView<DashboardController> {
                       ),
                       child: GestureDetector(
                         onTap: () {
-                          Get.toNamed('/yourRoute'); // Navigate to another page
+                          Get.to(()=>BillsAndRechargesView()); // Navigate to another page
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -418,14 +426,14 @@ class DashboardView extends GetView<DashboardController> {
                               icon: Icons.credit_card,
                               label: 'Credit Card\nPayment',
                               onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
+                                 Get.to(() => const CreditCardRepaymentView());
                               },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.home,
                               label: 'Rent',
                               onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
+                                 Get.to(() => const RentView());
                               },
                             ),
                           ],
@@ -756,7 +764,7 @@ class DashboardView extends GetView<DashboardController> {
                               ),
                               child: GestureDetector(
                                 onTap: () {
-                                  Get.toNamed('/yourRoute'); // Navigate to another page
+                                  // Get.to(() => BillsRechargesView());
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -1031,7 +1039,7 @@ class DashboardView extends GetView<DashboardController> {
                               ),
                               child: GestureDetector(
                                 onTap: () {
-                                  Get.toNamed('/yourRoute'); // Navigate to another page
+                                  Get.to(()=>TravelView()); // Navigate to another page
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -1232,7 +1240,7 @@ class DashboardView extends GetView<DashboardController> {
                               ),
                               child: GestureDetector(
                                 onTap: () {
-                                  Get.toNamed('/yourRoute'); // Navigate to another page
+                                  Get.to(()=>TransitAndFoodView()); // Navigate to another page
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -1368,7 +1376,7 @@ class DashboardView extends GetView<DashboardController> {
                               ),
                               child: GestureDetector(
                                 onTap: () {
-                                  Get.toNamed('/yourRoute'); // Navigate to another page
+                                  Get.to(()=>PurchasesView()); // Navigate to another page
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),

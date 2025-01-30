@@ -24,7 +24,7 @@ class CustomTransactionHistoryCard extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Image.asset('images/profile_image.png',
+                  Image.asset('assets/images/profile_image.png',
                       height: 50,
                       width: 50,),
                   SizedBox(width: 10),
@@ -59,7 +59,7 @@ class CustomTransactionHistoryCard extends StatelessWidget {
                 children: [
                   Text("Debited From"),
                   SizedBox(width: 6),
-                  Image.asset('images/bank_image.png',height: 40,width: 40,),
+                  Image.asset('assets/images/bank_image.png',height: 40,width: 40,),
                   SizedBox(width: 8),
                 ],
               ),

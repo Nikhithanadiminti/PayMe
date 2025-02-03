@@ -1,16 +1,16 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TransitAndFoodController extends GetxController {
+class DthController extends GetxController {
   final pageController = PageController();
   final currentIndex = 0.obs;
 
   // Updated image paths
   final carouselImages = [
-    'assets/images/travel3.png',
-    'assets/images/travel2.png',
-    'assets/images/easemytrip.png',
+    'assets/images/broadband1.png',
+    'assets/images/broadband2.jpg',
   ];
 
   late Timer autoScrollTimer;
@@ -22,18 +22,19 @@ class TransitAndFoodController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    startAutoSlide();
+    startAutoScroll();
   }
 
-  void startAutoSlide() {
-    Timer.periodic(Duration(seconds: 3), (timer) {
+  void startAutoScroll() {
+    autoScrollTimer = Timer.periodic(const Duration(seconds: 3), (timer) {
       if (pageController.hasClients) {
-        int nextPage = (currentIndex.value + 1) % carouselImages.length;
+        final nextPage = (currentIndex.value + 1) % carouselImages.length;
         pageController.animateToPage(
           nextPage,
-          duration: Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 300),
           curve: Curves.easeInOut,
         );
+        currentIndex.value = nextPage;
       }
     });
   }

@@ -37,6 +37,9 @@ abstract class Routes {
   static const PURCHASES = _Paths.PURCHASES;
   static const TRAVEL = _Paths.TRAVEL;
   static const TRANSIT_AND_FOOD = _Paths.TRANSIT_AND_FOOD;
+  static const FASTAG_RECHARGE = _Paths.FASTAG_RECHARGE;
+  static const DTH = _Paths.DTH;
+  static const PIPED_GAS = _Paths.PIPED_GAS;
 }
 
 abstract class _Paths {
@@ -77,4 +80,7 @@ abstract class _Paths {
   static const PURCHASES = '/purchases';
   static const TRAVEL = '/travel';
   static const TRANSIT_AND_FOOD = '/transit-and-food';
+  static const FASTAG_RECHARGE = '/fastag-recharge';
+  static const DTH = '/dth';
+  static const PIPED_GAS = '/piped-gas';
 }

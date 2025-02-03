@@ -12,6 +12,10 @@ import '../modules/credit_card_repayment/bindings/credit_card_repayment_binding.
 import '../modules/credit_card_repayment/views/credit_card_repayment_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
+import '../modules/dth/bindings/dth_binding.dart';
+import '../modules/dth/views/dth_view.dart';
+import '../modules/fastag_recharge/bindings/fastag_recharge_binding.dart';
+import '../modules/fastag_recharge/views/fastag_recharge_view.dart';
 import '../modules/financialDetails/bindings/financial_details_binding.dart';
 import '../modules/financialDetails/views/financial_details_view.dart';
 import '../modules/footer/bindings/footer_binding.dart';
@@ -22,6 +26,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/otpVerification/bindings/otp_verification_binding.dart';
 import '../modules/otpVerification/views/otp_verification_view.dart';
+import '../modules/piped_gas/bindings/piped_gas_binding.dart';
+import '../modules/piped_gas/views/piped_gas_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/profileDetails/bindings/profile_details_binding.dart';
@@ -161,5 +167,20 @@ class AppPages {
       page: () => const TransitAndFoodView(),
       binding: TransitAndFoodBinding(),
     ),
+    GetPage(
+      name: _Paths.FASTAG_RECHARGE,
+      page: () => const FastagRechargeView(),
+      binding: FastagRechargeBinding(),
+    ),
+    GetPage(
+      name: _Paths.DTH,
+      page: () => const DthView(),
+      binding: DthBinding(),
+    ),
+    // GetPage(
+    //   name: _Paths.PIPED_GAS,
+    //   page: () => const PipedGasView(),
+    //   binding: PipedGasBinding(),
+    // ),
   ];
 }

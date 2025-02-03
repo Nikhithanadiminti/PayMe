@@ -4,6 +4,9 @@ import 'package:demo_project/app/modules/mobile_recharge/views/mobile_recharge_v
 import 'package:demo_project/app/modules/rent/views/rent_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../dth/views/dth_view.dart';
+import '../../fastag_recharge/views/fastag_recharge_view.dart';
+import '../../piped_gas/views/piped_gas_view.dart';
 import '../../rent/views/broker_payment.dart';
 import '../../rent/views/property_deposit.dart';
 import '../../rent/views/society_maintenance.dart';
@@ -121,12 +124,12 @@ class BillsAndRechargesView extends GetView<BillsAndRechargesController> {
                         _buildOption(
                           icon: Icons.payment,
                           label: "FASTag\n Recharge",
-                          // onTap: () => Get.to(() => BasicBrokerageDetails()),
+                           onTap: () => Get.to(() => FastagRechargeView()),
                         ),
                         _buildOption(
                           icon: Icons.account_balance_wallet,
                           label: "DTH",
-                          // onTap: () => Get.to(() => PropertyDeposit()),
+                           onTap: () => Get.to(() => DthView()),
                         ),
                         _buildOption(
                           icon: Icons.money,
@@ -139,7 +142,6 @@ class BillsAndRechargesView extends GetView<BillsAndRechargesController> {
                 ),
               ),
               const SizedBox(height: 16),
-
               // Utilities Section
               Container(
                 padding: const EdgeInsets.all(8.0),
@@ -163,9 +165,10 @@ class BillsAndRechargesView extends GetView<BillsAndRechargesController> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildOption(icon: Icons.home, label: "Rent",
-                          onTap: () => Get.to(() => RentView()),),
-                        _buildOption(icon: Icons.gas_meter, label: "Piped Gas"),
+                        _buildOption(icon: Icons.home, label: "Rent", onTap: () => Get.to(() => RentView()),),
+                        _buildOption(icon: Icons.gas_meter, label: "Piped Gas",
+                          // onTap: ()=> Get.to(()=> PipedGasView()),
+                        ),
                         _buildOption(icon: Icons.water_drop, label: "Water"),
                         _buildOption(icon: Icons.electric_bolt, label: "Electricity"),
                       ],

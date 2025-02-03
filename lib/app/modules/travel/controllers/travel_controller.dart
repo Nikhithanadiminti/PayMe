@@ -18,26 +18,38 @@ class TravelController extends GetxController {
   get recents => null;
 
 
-
   @override
   void onInit() {
     super.onInit();
-    startAutoScroll();
+    startAutoSlide();
   }
 
-  void startAutoScroll() {
-    autoScrollTimer = Timer.periodic(const Duration(seconds: 3), (timer) {
+  void startAutoSlide() {
+    Timer.periodic(Duration(seconds: 3), (timer) {
       if (pageController.hasClients) {
-        final nextPage = (currentIndex.value + 1) % carouselImages.length;
+        int nextPage = (currentIndex.value + 1) % carouselImages.length;
         pageController.animateToPage(
           nextPage,
-          duration: const Duration(milliseconds: 300),
+          duration: Duration(milliseconds: 500),
           curve: Curves.easeInOut,
         );
-        currentIndex.value = nextPage;
       }
     });
   }
+
+  // void startAutoScroll() {
+  //   autoScrollTimer = Timer.periodic(const Duration(seconds: 3), (timer) {
+  //     if (pageController.hasClients) {
+  //       final nextPage = (currentIndex.value + 1) % carouselImages.length;
+  //       pageController.animateToPage(
+  //         nextPage,
+  //         duration: const Duration(milliseconds: 300),
+  //         curve: Curves.easeInOut,
+  //       );
+  //       currentIndex.value = nextPage;
+  //     }
+  //   });
+  // }
 
   void updateIndex(int index) {
     currentIndex.value = index;

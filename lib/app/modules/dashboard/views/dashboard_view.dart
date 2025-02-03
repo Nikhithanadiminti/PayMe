@@ -9,13 +9,11 @@ import 'package:demo_project/app/modules/to_self_account/views/to_self_account_v
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
-import '../../credit_card_repayment/views/credit_card_repayment_view.dart';
-import '../../loan_repayment/views/loan_repayment_view.dart';
-import '../../mobile_recharge/views/mobile_recharge_view.dart';
+
 import '../../purchases/views/purchases_view.dart';
-import '../../rent/views/rent_view.dart';
 import '../../transit_and_food/views/transit_and_food_view.dart';
 import '../../travel/views/travel_view.dart';
 import '../controllers/dashboard_controller.dart';
@@ -410,31 +408,23 @@ class DashboardView extends GetView<DashboardController> {
                             _buildNavigableIcon1(
                               icon: Icons.phone_iphone,
                               label: 'Mobile\nRecharge',
-                              onTap: () {
-                                 Get.to(() => MobileRechargeView());
-                              },
+                             url: '',
 
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.money,
                               label: 'Loan/\nRepayment',
-                              onTap: () {
-                                 Get.to(() => LoanRepaymentView());
-                              },
+                               url: '',
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.credit_card,
                               label: 'Credit Card\nPayment',
-                              onTap: () {
-                                 Get.to(() => const CreditCardRepaymentView());
-                              },
+                              url: '',
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.home,
                               label: 'Rent',
-                              onTap: () {
-                                 Get.to(() => const RentView());
-                              },
+                              url: '',
                             ),
                           ],
                         ),
@@ -530,30 +520,19 @@ class DashboardView extends GetView<DashboardController> {
                             _buildNavigableIcon1(
                               icon: Icons.school,
                               label: 'Tuition Fees',
-                              onTap: () {
-                                // Add your action for Tuition Fees
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.book,
                               label: 'Exam Fees',
-                              onTap: () {
-                                // Add your action for Exam Fees
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.money_off,
                               label: 'Scholarship',
-                              onTap: () {
-                                // Add your action for Scholarships
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.account_balance_wallet,
                               label: 'Fee Payments',
-                              onTap: () {
-                                // Add your action for Fee Payments
-                              },
+
                             ),
                           ],
                         ),
@@ -666,31 +645,19 @@ class DashboardView extends GetView<DashboardController> {
                             _buildNavigableIcon1(
                               icon: Icons.credit_score,
                               label: 'Credit Score',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
 
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.lock,
                               label: 'Gold Loan',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.bar_chart,
                               label: 'Mutual Fund\nLoan',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.bike_scooter,
                               label: 'Bike Loan',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                           ],
                         ),
@@ -802,31 +769,19 @@ class DashboardView extends GetView<DashboardController> {
                             _buildNavigableIcon1(
                               icon: Icons.directions_bike,
                               label: 'Bike',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
 
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.directions_car,
                               label: 'Car',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.monitor_heart_outlined,
                               label: 'Health',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.handshake,
                               label: 'Term Life',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                           ],
                         ),
@@ -941,31 +896,19 @@ class DashboardView extends GetView<DashboardController> {
                             _buildNavigableIcon1(
                               icon: Icons.trending_up,
                               label: 'Best SIP\nFunds',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
 
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.currency_rupee,
                               label: 'Start With\n₹100',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.assessment,
                               label: 'Large Cap\nFunds',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.show_chart,
                               label: 'Top Performing...',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                           ],
                         ),
@@ -1077,31 +1020,23 @@ class DashboardView extends GetView<DashboardController> {
                             _buildNavigableIcon1(
                               icon: Icons.flight_takeoff,
                               label: 'Flights',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
-
+                              url: "https://www.ixigo.com/?utm_source=Brand_Ggl_Search&utm_medium=paid_search_google&utm_campaign=Ixigo_Brand&utm_source=brand_g&utm_medium=paid_search_google&utm_campaign=ixigo_brand&gad_source=1&gclid=Cj0KCQiAwOe8BhCCARIsAGKeD578pjPF9FgTULxOVm7GBhpSzmxLva2FhYNF1dnrSJ3VZxVGF2u6FT0aAjJKEALw_wcB",
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.directions_bus,
                               label: 'Bus',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
+                              url:  "https://www.redbus.in/",
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.directions_train_outlined,
                               label: 'Trains',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
+                              url: "https://www.confirmtkt.com/",
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.business,
                               label: 'Hotels',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
+                              url: "https://www.easemytrip.com/offers/emtstay.html?gad_source=1&gclid=Cj0KCQiAwOe8BhCCARIsAGKeD57ZKYGaRGbwd2WlVQbKy3ydNEUW6O0JPAG2nS1JDXKpGkeUaxP01BUaAn76EALw_wcB",
+
                             ),
                           ],
                         ),
@@ -1278,31 +1213,18 @@ class DashboardView extends GetView<DashboardController> {
                             _buildNavigableIcon1(
                               icon: Icons.credit_card,
                               label: 'Buy FASTag',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
-
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.directions_subway,
                               label: 'Metro',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.directions_car,
                               label: 'Recharge\nFASTag',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.car_repair,
                               label: 'Roadside\nAssistance',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                           ],
                         ),
@@ -1414,31 +1336,19 @@ class DashboardView extends GetView<DashboardController> {
                             _buildNavigableIcon1(
                               icon: Icons.attach_money,
                               label: 'Gold',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
 
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.savings,
                               label: 'Daily Gold Savings',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.apps,
                               label: 'Google\nPlay',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                             _buildNavigableIcon1(
                               icon: Icons.card_giftcard,
                               label: 'Brand\nVouchers',
-                              onTap: () {
-                                // Get.to(() => const ToMobileNumberPage());
-                              },
                             ),
                           ],
                         ),
@@ -1527,10 +1437,13 @@ class DashboardView extends GetView<DashboardController> {
     required IconData icon,
     required String label,
     bool notificationDot = false,
-    required VoidCallback onTap,
+    //required VoidCallback onTap,
+    String? url
   }) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () {
+        if (url != null) _launchUrl(url);
+      },
       child: Column(
         mainAxisSize: MainAxisSize.min,
         // Ensures that the column takes minimal space
@@ -1567,5 +1480,13 @@ class DashboardView extends GetView<DashboardController> {
       ),
     );
   }
+  Future<void> _launchUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      debugPrint("Could not launch $url");
+    }
+  }
 
 }
+
+

@@ -39,6 +39,7 @@ dependencies:
   dotted_border: ^2.1.0
   permission_handler: ^11.3.1
   curved_navigation_bar: ^1.0.6
+  url_launcher: ^6.3.1
 #  mobile_scanner: ^6.0.3
 #  image_picker: ^1.0.7
 

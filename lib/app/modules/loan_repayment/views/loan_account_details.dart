@@ -86,12 +86,12 @@ class LoanAccountDetails extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset("assets/images/bajaj_finserv.jpg",
+                Image.asset("assets/images/bharat_connect.png",
                 height: 50,
                     width: 50),
                 SizedBox(width: 10),
                 Text(
-                  "jtgrfkjbdmfbdjhfgkuhdkjghm,fdnmgvbmd"
+                  "By proceeding further, you allow PayMe to \nfetch your current and future dates and \nremind you"
                 )
               ],
             ),

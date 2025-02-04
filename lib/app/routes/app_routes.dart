@@ -83,4 +83,9 @@ abstract class _Paths {
   static const FASTAG_RECHARGE = '/fastag-recharge';
   static const DTH = '/dth';
   static const PIPED_GAS = '/piped-gas';
+  static const LOAN = '/loan';
+  static const BIKELOAN = '/bikeloan';
+  static const GOLDLOAN = '/goldloan';
+  static const MUTUALFUNDLOAN = '/mutualfundloan';
+  static const CREDITSCORE = '/creditscore';
 }

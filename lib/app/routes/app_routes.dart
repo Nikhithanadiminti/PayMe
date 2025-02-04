@@ -40,6 +40,11 @@ abstract class Routes {
   static const FASTAG_RECHARGE = _Paths.FASTAG_RECHARGE;
   static const DTH = _Paths.DTH;
   static const PIPED_GAS = _Paths.PIPED_GAS;
+  static const LOAN = _Paths.LOAN;
+  static const BIKELOAN = _Paths.BIKELOAN;
+  static const GOLDLOAN = _Paths.GOLDLOAN;
+  static const MUTUALFUNDLOAN = _Paths.MUTUALFUNDLOAN;
+  static const CREDITSCORE = _Paths.CREDITSCORE;
 }
 
 abstract class _Paths {
@@ -83,4 +88,9 @@ abstract class _Paths {
   static const FASTAG_RECHARGE = '/fastag-recharge';
   static const DTH = '/dth';
   static const PIPED_GAS = '/piped-gas';
+  static const LOAN = '/loan';
+  static const BIKELOAN = '/bikeloan';
+  static const GOLDLOAN = '/goldloan';
+  static const MUTUALFUNDLOAN = '/mutualfundloan';
+  static const CREDITSCORE = '/creditscore';
 }

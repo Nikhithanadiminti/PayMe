@@ -6,10 +6,14 @@ import '../modules/add_upi_id/bindings/add_upi_id_binding.dart';
 import '../modules/add_upi_id/views/add_upi_id_view.dart';
 import '../modules/additionalDetails/bindings/additional_details_binding.dart';
 import '../modules/additionalDetails/views/additional_details_view.dart';
+import '../modules/bikeloan/bindings/bikeloan_binding.dart';
+import '../modules/bikeloan/views/bikeloan_view.dart';
 import '../modules/bills_and_recharges/bindings/bills_and_recharges_binding.dart';
 import '../modules/bills_and_recharges/views/bills_and_recharges_view.dart';
 import '../modules/credit_card_repayment/bindings/credit_card_repayment_binding.dart';
 import '../modules/credit_card_repayment/views/credit_card_repayment_view.dart';
+import '../modules/creditscore/bindings/creditscore_binding.dart';
+import '../modules/creditscore/views/creditscore_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
 import '../modules/dth/bindings/dth_binding.dart';
@@ -20,14 +24,18 @@ import '../modules/financialDetails/bindings/financial_details_binding.dart';
 import '../modules/financialDetails/views/financial_details_view.dart';
 import '../modules/footer/bindings/footer_binding.dart';
 import '../modules/footer/views/footer_view.dart';
+import '../modules/goldloan/bindings/goldloan_binding.dart';
+import '../modules/goldloan/views/goldloan_view.dart';
 import '../modules/header/bindings/header_binding.dart';
 import '../modules/header/views/header_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/loan/bindings/loan_binding.dart';
+import '../modules/loan/views/loan_view.dart';
+import '../modules/mutualfundloan/bindings/mutualfundloan_binding.dart';
+import '../modules/mutualfundloan/views/mutualfundloan_view.dart';
 import '../modules/otpVerification/bindings/otp_verification_binding.dart';
 import '../modules/otpVerification/views/otp_verification_view.dart';
-import '../modules/piped_gas/bindings/piped_gas_binding.dart';
-import '../modules/piped_gas/views/piped_gas_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/profileDetails/bindings/profile_details_binding.dart';
@@ -48,6 +56,9 @@ import '../modules/transit_and_food/bindings/transit_and_food_binding.dart';
 import '../modules/transit_and_food/views/transit_and_food_view.dart';
 import '../modules/travel/bindings/travel_binding.dart';
 import '../modules/travel/views/travel_view.dart';
+
+// import '../modules/piped_gas/bindings/piped_gas_binding.dart';
+// import '../modules/piped_gas/views/piped_gas_view.dart';
 
 part 'app_routes.dart';
 
@@ -182,5 +193,30 @@ class AppPages {
     //   page: () => const PipedGasView(),
     //   binding: PipedGasBinding(),
     // ),
+    GetPage(
+      name: _Paths.LOAN,
+      page: () => const LoanView(),
+      binding: LoanBinding(),
+    ),
+    GetPage(
+      name: _Paths.BIKELOAN,
+      page: () => const BikeloanView(),
+      binding: BikeloanBinding(),
+    ),
+    GetPage(
+      name: _Paths.GOLDLOAN,
+      page: () => const GoldloanView(),
+      binding: GoldloanBinding(),
+    ),
+    GetPage(
+      name: _Paths.MUTUALFUNDLOAN,
+      page: () => const MutualfundloanView(),
+      binding: MutualfundloanBinding(),
+    ),
+    GetPage(
+      name: _Paths.CREDITSCORE,
+      page: () => const CreditscoreView(),
+      binding: CreditscoreBinding(),
+    ),
   ];
 }

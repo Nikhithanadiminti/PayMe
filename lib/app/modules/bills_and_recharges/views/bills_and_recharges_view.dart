@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../dth/views/dth_view.dart';
 import '../../fastag_recharge/views/fastag_recharge_view.dart';
-import '../../piped_gas/views/piped_gas_view.dart';
+// import '../../piped_gas/views/piped_gas_view.dart';
 import '../../rent/views/broker_payment.dart';
 import '../../rent/views/property_deposit.dart';
 import '../../rent/views/society_maintenance.dart';

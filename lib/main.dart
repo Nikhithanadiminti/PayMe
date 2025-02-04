@@ -17,7 +17,7 @@ import 'app/modules/credit_card_repayment/controllers/credit_card_repayment_cont
 import 'app/modules/dth/controllers/dth_controller.dart';
 import 'app/modules/fastag_recharge/controllers/fastag_recharge_controller.dart';
 import 'app/modules/mobile_recharge/controllers/mobile_recharge_controller.dart';
-import 'app/modules/piped_gas/controllers/piped_gas_controller.dart';
+// import 'app/modules/piped_gas/controllers/piped_gas_controller.dart';
 import 'app/modules/rent/controllers/pay_for_rentals_controller.dart';
 import 'app/modules/transit_and_food/controllers/transit_and_food_controller.dart';
 import 'app/routes/app_pages.dart';

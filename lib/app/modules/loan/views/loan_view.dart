@@ -14,7 +14,12 @@ class LoanView extends GetView<LoanController> {
       appBar: AppBar(
         backgroundColor: primaryColor,
         title: const Text("Loan", style: TextStyle(color: Colors.white)),
-        leading: const Icon(Icons.arrow_back, color: Colors.white),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Get.back();  // This will go back to the previous screen using GetX
+          },
+        ),
         actions: const [
           Padding(
             padding: EdgeInsets.all(10.0),

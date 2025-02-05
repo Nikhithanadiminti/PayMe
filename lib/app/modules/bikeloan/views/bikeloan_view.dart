@@ -29,7 +29,10 @@ class BikeLoanView extends StatelessWidget {
         backgroundColor: Color(0xFF007f97),
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () {
+            Get.back();  // This will go back to the previous screen using GetX
+          },
+
         ),
         actions: [
           IconButton(

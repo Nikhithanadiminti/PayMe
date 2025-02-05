@@ -38,6 +38,12 @@ import '../modules/purchases/bindings/purchases_binding.dart';
 import '../modules/purchases/views/purchases_view.dart';
 import '../modules/qr_code_scanner/bindings/qr_code_scanner_binding.dart';
 import '../modules/qr_code_scanner/views/qr_code_scanner_view.dart';
+import '../modules/scanned_payment_details/bindings/scanned_payment_details_binding.dart';
+import '../modules/scanned_payment_details/views/scanned_payment_details_view.dart';
+import '../modules/to_mobile_no/bindings/to_mobile_no_binding.dart';
+import '../modules/to_mobile_no/views/to_mobile_no_view.dart';
+import '../modules/to_mobile_num_payment_details/bindings/to_mobile_num_payment_details_binding.dart';
+import '../modules/to_mobile_num_payment_details/views/to_mobile_num_payment_details_view.dart';
 import '../modules/questionnaire/bindings/questionnaire_binding.dart';
 import '../modules/questionnaire/views/questionnaire_view.dart';
 import '../modules/rent/bindings/rent_binding.dart';
@@ -171,6 +177,23 @@ class AppPages {
       name: _Paths.FASTAG_RECHARGE,
       page: () => const FastagRechargeView(),
       binding: FastagRechargeBinding(),
+    ),
+    GetPage(
+      name: _Paths.SCANNED_PAYMENT_DETAILS,
+      page: () => const ScannedPaymentDetailsView(
+        contactName: '',
+      ),
+      binding: ScannedPaymentDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.TO_MOBILE_NO,
+      page: () =>  ToMobileNoView(),
+      binding: ToMobileNoBinding(),
+    ),
+    GetPage(
+      name: _Paths.TO_MOBILE_NUM_PAYMENT_DETAILS,
+      page: () => const ToMobileNumPaymentDetailsView(contactName: '',),
+      binding: ToMobileNumPaymentDetailsBinding(),
     ),
     GetPage(
       name: _Paths.DTH,

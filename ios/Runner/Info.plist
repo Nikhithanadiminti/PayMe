@@ -3,6 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
+	<key>LSApplicationQueriesSchemes</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Demo Project</string>
@@ -29,10 +30,14 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UISupportedInterfaceOrientations</key>
+	<key>NSContactsUsageDescription</key>
+    <string>Your message about why the app needs contacts access</string>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>http</string>
+        <string>https</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

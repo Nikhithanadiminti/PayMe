@@ -14,6 +14,12 @@ abstract class Routes {
   static const DASHBOARD = _Paths.DASHBOARD;
   static const HEADER = _Paths.HEADER;
   static const FOOTER = _Paths.FOOTER;
+  static const TRANSACTIONS = _Paths.TRANSACTIONS;
+  static const DOWNLOAD = _Paths.DOWNLOAD;
+  static const HELP = _Paths.HELP;
+  static const FILTERS = _Paths.FILTERS;
+  static const MOBILE_RECHARGE = _Paths.MOBILE_RECHARGE;
+  static const LOAN_REPAYMENT = _Paths.LOAN_REPAYMENT;
   static const QRCODESCANNER = _Paths.QRCODESCANNER;
   static const TO_BANK_UPI_ID = _Paths.TO_BANK_UPI_ID;
   static const TO_SELF_ACCOUNT = _Paths.TO_SELF_ACCOUNT;
@@ -26,6 +32,19 @@ abstract class Routes {
   static const TO_MOBILE_NO = _Paths.TO_MOBILE_NO;
   static const TO_MOBILE_NUM_PAYMENT_DETAILS =
       _Paths.TO_MOBILE_NUM_PAYMENT_DETAILS;
+  // static const QR_CODE_SCANNER = _Paths.QR_CODE_SCANNER;
+  static const QUESTIONNAIRE = _Paths.QUESTIONNAIRE;
+  static const TO_MOBILE_NUMBER = _Paths.TO_MOBILE_NUMBER;
+  static const CREDIT_CARD_REPAYMENT = _Paths.CREDIT_CARD_REPAYMENT;
+  static const RENT = _Paths.RENT;
+  static const BILLS_RECHARGES = _Paths.BILLS_RECHARGES;
+  static const BILLS_AND_RECHARGES = _Paths.BILLS_AND_RECHARGES;
+  static const PURCHASES = _Paths.PURCHASES;
+  static const TRAVEL = _Paths.TRAVEL;
+  static const TRANSIT_AND_FOOD = _Paths.TRANSIT_AND_FOOD;
+  static const FASTAG_RECHARGE = _Paths.FASTAG_RECHARGE;
+  static const DTH = _Paths.DTH;
+  static const PIPED_GAS = _Paths.PIPED_GAS;
 }
 
 abstract class _Paths {
@@ -53,4 +72,29 @@ abstract class _Paths {
   static const SCANNED_PAYMENT_DETAILS = '/scanned-payment-details';
   static const TO_MOBILE_NO = '/to-mobile-no';
   static const TO_MOBILE_NUM_PAYMENT_DETAILS = '/to-mobile-num-payment-details';
+  // static const QR_CODE_SCANNER = '/qr-code-scanner';
+  static const QUESTIONNAIRE = '/questionnaire';
+  static const TO_MOBILE_NUMBER = '/to-mobile-number';
+
+  static const TRANSACTIONS = '/transactions';
+  static const DOWNLOAD = '/download';
+  static const HELP = '/help';
+  static const FILTERS = '/filters';
+  static const MOBILE_RECHARGE = '/mobile-recharge';
+  static const LOAN_REPAYMENT = '/loan-repayment';
+  static const CREDIT_CARD_REPAYMENT = '/credit-card-repayment';
+  static const RENT = '/rent';
+  static const BILLS_RECHARGES = '/bills-recharges';
+  static const BILLS_AND_RECHARGES = '/bills-and-recharges';
+  static const PURCHASES = '/purchases';
+  static const TRAVEL = '/travel';
+  static const TRANSIT_AND_FOOD = '/transit-and-food';
+  static const FASTAG_RECHARGE = '/fastag-recharge';
+  static const DTH = '/dth';
+  static const PIPED_GAS = '/piped-gas';
+  static const LOAN = '/loan';
+  static const BIKELOAN = '/bikeloan';
+  static const GOLDLOAN = '/goldloan';
+  static const MUTUALFUNDLOAN = '/mutualfundloan';
+  static const CREDITSCORE = '/creditscore';
 }

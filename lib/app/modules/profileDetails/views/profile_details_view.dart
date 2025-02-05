@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../addAddress/views/add_address_view.dart';
 import '../../additionalDetails/views/additional_details_view.dart';
 import '../../financialDetails/views/financial_details_view.dart';
 import '../../profileEditDetails/views/profile_edit_details_view.dart';
@@ -181,48 +182,54 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                     ],
                   ),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start, // Align children to the left
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // "Saved Address" Heading
-                      Text(
+                      const Text(
                         'Saved Address',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 16), // Space below the heading
+                      const SizedBox(height: 16), // Space below the heading
 
                       // Dotted Border Container with + Icon and Add New Text
-                      DottedBorder(
-                        color: Colors.grey, // Dotted border color
-                        strokeWidth: 2, // Border width
-                        dashPattern: [6, 4], // Length of dashes and spaces
-                        borderType: BorderType.RRect, // Rounded corners for the border
-                        radius: Radius.circular(8), // Rounded corners for the dashed border
-                        child: Container(
-                          width: 180.0, // Width of the dashed container
-                          height: 100.0, // Height of the dashed container
-                          padding: const EdgeInsets.all(16.0), // Padding inside the dashed container
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center, // Center content vertically
-                            crossAxisAlignment: CrossAxisAlignment.center, // Center content horizontally
-                            children: [
-                              Icon(
-                                Icons.add, // Add icon
-                                color: Color(0xFF007f97), // Icon color
-                                size: 24, // Icon size
-                              ),
-                              SizedBox(height: 8), // Space between icon and text
-                              Text(
-                                'Add New', // Text for the button
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Color(0xFF007f97), // Text color matching the icon
-                                  fontWeight: FontWeight.bold,
+                      GestureDetector(
+                        onTap: () {
+                          // Navigate to the Add Address screen when tapped
+                          Get.to(() => AddAddressView());
+                        },
+                        child: DottedBorder(
+                          color: Colors.grey, // Dotted border color
+                          strokeWidth: 2, // Border width
+                          dashPattern: const [6, 4], // Length of dashes and spaces
+                          borderType: BorderType.RRect, // Rounded corners for the border
+                          radius: const Radius.circular(8), // Rounded corners for the dashed border
+                          child: Container(
+                            width: 180.0, // Width of the dashed container
+                            height: 100.0, // Height of the dashed container
+                            padding: const EdgeInsets.all(16.0), // Padding inside the dashed container
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center, // Center content vertically
+                              crossAxisAlignment: CrossAxisAlignment.center, // Center content horizontally
+                              children: [
+                                Icon(
+                                  Icons.add, // Add icon
+                                  color: const Color(0xFF007f97), // Icon color
+                                  size: 24, // Icon size
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 8), // Space between icon and text
+                                const Text(
+                                  'Add New', // Text for the button
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Color(0xFF007f97), // Text color matching the icon
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

@@ -10,7 +10,7 @@ class HeaderView extends GetView<HeaderController> implements PreferredSizeWidge
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(0xFF007f97),
+      // backgroundColor: Color(0xFF007f97),
       leading: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GestureDetector(
@@ -92,6 +92,14 @@ class HeaderView extends GetView<HeaderController> implements PreferredSizeWidge
           ),
         ),
       ],
+      flexibleSpace: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/main_background_color.png'), // Path to your background image
+            fit: BoxFit.cover, // Controls how the image should fit the space
+          ),
+        ),
+      ),
     );
   }
 

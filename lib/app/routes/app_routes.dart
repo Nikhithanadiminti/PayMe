@@ -22,6 +22,10 @@ abstract class Routes {
   static const ADD_UPI_NUMBER = _Paths.ADD_UPI_NUMBER;
   static const ADD_UPI_ID = _Paths.ADD_UPI_ID;
   static const QR_CODE_SCANNER = _Paths.QR_CODE_SCANNER;
+  static const SCANNED_PAYMENT_DETAILS = _Paths.SCANNED_PAYMENT_DETAILS;
+  static const TO_MOBILE_NO = _Paths.TO_MOBILE_NO;
+  static const TO_MOBILE_NUM_PAYMENT_DETAILS =
+      _Paths.TO_MOBILE_NUM_PAYMENT_DETAILS;
 }
 
 abstract class _Paths {
@@ -46,4 +50,7 @@ abstract class _Paths {
   static const ADD_UPI_NUMBER = '/add-upi-number';
   static const ADD_UPI_ID = '/add-upi-id';
   static const QR_CODE_SCANNER = '/qr-code-scanner';
+  static const SCANNED_PAYMENT_DETAILS = '/scanned-payment-details';
+  static const TO_MOBILE_NO = '/to-mobile-no';
+  static const TO_MOBILE_NUM_PAYMENT_DETAILS = '/to-mobile-num-payment-details';
 }

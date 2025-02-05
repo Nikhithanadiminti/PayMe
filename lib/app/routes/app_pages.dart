@@ -26,13 +26,19 @@ import '../modules/profileEditDetails/bindings/profile_edit_details_binding.dart
 import '../modules/profileEditDetails/views/profile_edit_details_view.dart';
 import '../modules/qr_code_scanner/bindings/qr_code_scanner_binding.dart';
 import '../modules/qr_code_scanner/views/qr_code_scanner_view.dart';
+import '../modules/scanned_payment_details/bindings/scanned_payment_details_binding.dart';
+import '../modules/scanned_payment_details/views/scanned_payment_details_view.dart';
+import '../modules/to_mobile_no/bindings/to_mobile_no_binding.dart';
+import '../modules/to_mobile_no/views/to_mobile_no_view.dart';
+import '../modules/to_mobile_num_payment_details/bindings/to_mobile_num_payment_details_binding.dart';
+import '../modules/to_mobile_num_payment_details/views/to_mobile_num_payment_details_view.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN;
+  static const INITIAL = Routes.TO_MOBILE_NO;
 
   static final routes = [
     GetPage(
@@ -104,6 +110,23 @@ class AppPages {
       name: _Paths.QR_CODE_SCANNER,
       page: () => const QrCodeScannerView(),
       binding: QrCodeScannerBinding(),
+    ),
+    GetPage(
+      name: _Paths.SCANNED_PAYMENT_DETAILS,
+      page: () => const ScannedPaymentDetailsView(
+        contactName: '',
+      ),
+      binding: ScannedPaymentDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.TO_MOBILE_NO,
+      page: () =>  ToMobileNoView(),
+      binding: ToMobileNoBinding(),
+    ),
+    GetPage(
+      name: _Paths.TO_MOBILE_NUM_PAYMENT_DETAILS,
+      page: () => const ToMobileNumPaymentDetailsView(contactName: '',),
+      binding: ToMobileNumPaymentDetailsBinding(),
     ),
   ];
 }

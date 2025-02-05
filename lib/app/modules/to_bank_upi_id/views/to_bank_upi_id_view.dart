@@ -1,4 +1,5 @@
 import 'package:demo_project/app/modules/add_upi_id/views/add_upi_id_view.dart';
+import 'package:demo_project/app/modules/add_upi_number/views/add_upi_number_view.dart';
 import 'package:demo_project/app/modules/select_receiver_bank_account/views/select_receiver_bank_account_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -36,16 +37,26 @@ class ToBankUpiIdView extends GetView<ToBankUpiIdController> {
           children: [
 
             // Search Input Field
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.search, color: Color(0xFF007f97)),
-                  hintText: 'Search Bank Account, UPI ID ' ,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0),
+            Container(
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.search, color: Color(0xFF007f97)),
+                    hintText: 'Search Bank Account, UPI ID',
+                    hoverColor: Colors.white, // Set hover color here
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: BorderSide(color: Color(0xFF007f97), width: 2),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: BorderSide(color: Color(0xFF007f97).withOpacity(0.6), width: 2),
+                    ),
                   ),
                 ),
+
               ),
             ),
 
@@ -598,7 +609,7 @@ class ToBankUpiIdView extends GetView<ToBankUpiIdController> {
                             padding: const EdgeInsets.all(16.0),
                             child: ElevatedButton(
                               onPressed: () {
-
+                              Get.to(AddUpiNumberView());
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Color(0xFF007f97), // Set the background color
@@ -612,6 +623,7 @@ class ToBankUpiIdView extends GetView<ToBankUpiIdController> {
                           ),
                         ),
                         const Spacer(),
+
 
                         Image.asset(
                           'assets/images/UPI.jpg', // Replace with your image path

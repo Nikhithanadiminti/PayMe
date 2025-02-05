@@ -1,6 +1,7 @@
 import 'package:demo_project/app/modules/footer/views/footer_view.dart';
 import 'package:demo_project/app/modules/header/views/header_view.dart';
 import 'package:demo_project/app/modules/to_bank_upi_id/views/to_bank_upi_id_view.dart';
+import 'package:demo_project/app/modules/to_mobile_no/views/to_mobile_no_view.dart';
 import 'package:demo_project/app/modules/to_self_account/views/to_self_account_view.dart';
 import 'package:flutter/material.dart';
 
@@ -70,7 +71,7 @@ class DashboardView extends GetView<DashboardController> {
                                 icon: Icons.person,
                                 label: 'To Mobile\nNumber',
                                 onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
+                                  // Get.to(() => const ToMobileNoView());
                                 },
                                 notificationDot: true,
 

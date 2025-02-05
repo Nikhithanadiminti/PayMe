@@ -3,7 +3,6 @@
 import 'package:demo_project/app/modules/bills_and_recharges/views/bills_and_recharges_view.dart';
 import 'package:demo_project/app/modules/footer/views/footer_view.dart';
 import 'package:demo_project/app/modules/header/views/header_view.dart';
-import 'package:demo_project/app/modules/toMobileNumber/views/to_mobile_number_view.dart';
 import 'package:demo_project/app/modules/to_bank_upi_id/views/to_bank_upi_id_view.dart';
 import 'package:demo_project/app/modules/to_self_account/views/to_self_account_view.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +20,7 @@ import '../../mobile_recharge/views/mobile_recharge_view.dart';
 import '../../mutualfundloan/views/mutualfundloan_view.dart';
 import '../../purchases/views/purchases_view.dart';
 import '../../rent/views/rent_view.dart';
+import '../../to_mobile_no/views/to_mobile_no_view.dart';
 import '../../transit_and_food/views/transit_and_food_view.dart';
 import '../../travel/views/travel_view.dart';
 import '../controllers/dashboard_controller.dart';
@@ -86,7 +86,7 @@ class DashboardView extends GetView<DashboardController> {
                                 icon: Icons.person,
                                 label: 'To Mobile\nNumber',
                                 onTap: () {
-                                  Get.to(() => const ToMobileNumberView());
+                                  Get.to(() => const ToMobileNoView());
                                 },
                                 notificationDot: true,
 

@@ -48,8 +48,6 @@ import '../modules/questionnaire/bindings/questionnaire_binding.dart';
 import '../modules/questionnaire/views/questionnaire_view.dart';
 import '../modules/rent/bindings/rent_binding.dart';
 import '../modules/rent/views/rent_view.dart';
-import '../modules/toMobileNumber/bindings/to_mobile_number_binding.dart';
-import '../modules/toMobileNumber/views/to_mobile_number_view.dart';
 import '../modules/transit_and_food/bindings/transit_and_food_binding.dart';
 import '../modules/transit_and_food/views/transit_and_food_view.dart';
 import '../modules/travel/bindings/travel_binding.dart';
@@ -137,11 +135,6 @@ class AppPages {
       name: _Paths.QUESTIONNAIRE,
       page: () => const QuestionnaireView(),
       binding: QuestionnaireBinding(),
-    ),
-    GetPage(
-      name: _Paths.TO_MOBILE_NUMBER,
-      page: () => const ToMobileNumberView(),
-      binding: ToMobileNumberBinding(),
     ),
     GetPage(
       name: _Paths.CREDIT_CARD_REPAYMENT,

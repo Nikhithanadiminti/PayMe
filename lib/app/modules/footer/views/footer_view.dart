@@ -42,8 +42,8 @@ class FooterView extends GetView<FooterController> {
           print("Home tapped");
         } else if (index == 1) {
           controller.updateIndex(1); // Update the selected index
-          // Get.to(() => QrCodeScannerView()); // Navigate to QR Code Scanner view
-          print("Scanner tapped");
+          Get.to(() => QrCodeScannerView()); // Navigate to QR Code Scanner view
+
         } else if (index == 2) {
           controller.updateIndex(2); // Update the selected index
            Get.to(() => TransactionsView());

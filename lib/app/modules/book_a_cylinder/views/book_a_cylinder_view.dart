@@ -54,6 +54,9 @@ class BookACylinderView extends GetView<BookACylinderController> {
     );
   }
 
+
+
+
   Widget _buildCarousel() {
     return Column(
       children: [

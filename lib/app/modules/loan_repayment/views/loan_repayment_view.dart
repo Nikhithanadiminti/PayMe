@@ -4,10 +4,11 @@ import '../controllers/loan_repayment_controller.dart';
 import 'loan_account_details.dart';
 
 class LoanRepaymentView extends StatelessWidget {
-  final LoanRepaymentController controller = Get.put(LoanRepaymentController());
+  const LoanRepaymentView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final LoanRepaymentController controller = Get.put(LoanRepaymentController());
     return Scaffold(
       backgroundColor: Colors.white70.withOpacity(0.9),
       appBar: AppBar(

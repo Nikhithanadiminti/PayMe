@@ -8,6 +8,10 @@ import '../modules/additionalDetails/bindings/additional_details_binding.dart';
 import '../modules/additionalDetails/views/additional_details_view.dart';
 import '../modules/bills_and_recharges/bindings/bills_and_recharges_binding.dart';
 import '../modules/bills_and_recharges/views/bills_and_recharges_view.dart';
+import '../modules/book_a_cylinder/bindings/book_a_cylinder_binding.dart';
+import '../modules/book_a_cylinder/views/book_a_cylinder_view.dart';
+import '../modules/cable_tv/bindings/cable_tv_binding.dart';
+import '../modules/cable_tv/views/cable_tv_view.dart';
 import '../modules/credit_card_repayment/bindings/credit_card_repayment_binding.dart';
 import '../modules/credit_card_repayment/views/credit_card_repayment_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
@@ -198,5 +202,15 @@ class AppPages {
     //   page: () => const PipedGasView(),
     //   binding: PipedGasBinding(),
     // ),
+    GetPage(
+      name: _Paths.CABLE_TV,
+      page: () => const CableTvView(),
+      binding: CableTvBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOOK_A_CYLINDER,
+      page: () => const BookACylinderView(),
+      binding: BookACylinderBinding(),
+    ),
   ];
 }

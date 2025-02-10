@@ -86,7 +86,7 @@ class LoanAccountDetails extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset("assets/images/bharat_connect.png",
+                Image.asset("assets/images/bharat_connect.webp",
                 height: 50,
                     width: 50),
                 SizedBox(width: 10),

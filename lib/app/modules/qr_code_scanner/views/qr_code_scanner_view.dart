@@ -1,8 +1,8 @@
 import 'dart:async'; // Import for Timer
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
+
 import '../controllers/qr_code_scanner_controller.dart';
 
 class QrCodeScannerView extends GetView<QrCodeScannerController> {

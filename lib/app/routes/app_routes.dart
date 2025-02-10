@@ -45,6 +45,8 @@ abstract class Routes {
   static const FASTAG_RECHARGE = _Paths.FASTAG_RECHARGE;
   static const DTH = _Paths.DTH;
   static const PIPED_GAS = _Paths.PIPED_GAS;
+  static const CABLE_TV = _Paths.CABLE_TV;
+  static const BOOK_A_CYLINDER = _Paths.BOOK_A_CYLINDER;
 }
 
 abstract class _Paths {
@@ -97,4 +99,6 @@ abstract class _Paths {
   static const GOLDLOAN = '/goldloan';
   static const MUTUALFUNDLOAN = '/mutualfundloan';
   static const CREDITSCORE = '/creditscore';
+  static const CABLE_TV = '/cable-tv';
+  static const BOOK_A_CYLINDER = '/book-a-cylinder';
 }

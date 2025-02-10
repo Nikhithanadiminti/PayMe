@@ -4,8 +4,11 @@ import 'package:demo_project/app/modules/mobile_recharge/views/mobile_recharge_v
 import 'package:demo_project/app/modules/rent/views/rent_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../book_a_cylinder/views/book_a_cylinder_view.dart';
+import '../../cable_tv/views/cable_tv_view.dart';
 import '../../dth/views/dth_view.dart';
 import '../../fastag_recharge/views/fastag_recharge_view.dart';
+import '../../piped_gas/views/piped_gas_view.dart';
 // import '../../piped_gas/views/piped_gas_view.dart';
 import '../../rent/views/broker_payment.dart';
 import '../../rent/views/property_deposit.dart';
@@ -167,7 +170,7 @@ class BillsAndRechargesView extends GetView<BillsAndRechargesController> {
                       children: [
                         _buildOption(icon: Icons.home, label: "Rent", onTap: () => Get.to(() => RentView()),),
                         _buildOption(icon: Icons.gas_meter, label: "Piped Gas",
-                          // onTap: ()=> Get.to(()=> PipedGasView()),
+                           onTap: ()=> Get.to(()=> PipedGasView()),
                         ),
                         _buildOption(icon: Icons.water_drop, label: "Water"),
                         _buildOption(icon: Icons.electric_bolt, label: "Electricity"),
@@ -181,7 +184,9 @@ class BillsAndRechargesView extends GetView<BillsAndRechargesController> {
                         _buildOption(icon: Icons.wifi, label: "Broadband \nLandline"),
                         _buildOption(icon: Icons.credit_card, label: "Credit Card\nPayment",
                           onTap: () => Get.to(() => CreditCardRepaymentView()),),
-                        _buildOption(icon: Icons.local_gas_station, label: "Book a\nCylinder"),
+                        _buildOption(icon: Icons.local_gas_station, label: "Book a\nCylinder",
+                        onTap: () => Get.to(()=> BookACylinderView()),
+                        ),
                       ],
                     ),
                   ],
@@ -217,17 +222,17 @@ class BillsAndRechargesView extends GetView<BillsAndRechargesController> {
                         _buildOption(
                           icon: Icons.payment,
                           label: "FASTag\n Recharge",
-                          // onTap: () => Get.to(() => BasicBrokerageDetails()),
+                           onTap: () => Get.to(() => FastagRechargeView()),
                         ),
                         _buildOption(
                           icon: Icons.account_balance_wallet,
                           label: "DTH",
-                          // onTap: () => Get.to(() => PropertyDeposit()),
+                          onTap: () => Get.to(() => DthView()),
                         ),
                         _buildOption(
                           icon: Icons.tv,
                           label: "Cable TV",
-                          // onTap: () => Get.to(() => LoanRepaymentView()),
+                           onTap: () => Get.to(() => CableTvView()),
                         ),
                       ],
                     ),

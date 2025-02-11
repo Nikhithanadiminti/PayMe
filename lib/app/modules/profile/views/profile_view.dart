@@ -1,3 +1,4 @@
+import 'package:demo_project/app/modules/loan/views/loan_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Login/views/login_view.dart';
@@ -218,18 +219,19 @@ class ProfileView extends GetView<ProfileController> {
                     itemCount: 7, // Total number of payment methods
                     itemBuilder: (context, index) {
                       final paymentMethods = [
-                        {'icon': Icons.account_balance, 'label': 'Bank Accounts'},
-                        {'icon': Icons.credit_card, 'label': 'Debit & Credit Cards'},
-                        {'icon': Icons.phone_android, 'label': 'PayMe Wallet'},
-                        {'icon': Icons.card_giftcard, 'label': 'PayMe Gift Card'},
-                        {'icon': Icons.upgrade, 'label': 'UPI Lite'},
-                        {'icon': Icons.credit_card_rounded, 'label': 'Rupay Credit on UPI'},
-                        {'icon': Icons.local_atm, 'label': 'Credit Line on UPI'},
+                        {'icon': Icons.account_balance, 'label': 'Bank Accounts', 'screen': LoanView()},
+                        {'icon': Icons.credit_card, 'label': 'Debit & Credit Cards', 'screen': LoanView()},
+                        {'icon': Icons.phone_android, 'label': 'PayMe Wallet', 'screen': LoanView()},
+                        {'icon': Icons.card_giftcard, 'label': 'PayMe Gift Card', 'screen': LoanView()},
+                        {'icon': Icons.upgrade, 'label': 'UPI Lite', 'screen': LoanView()},
+                        {'icon': Icons.credit_card_rounded, 'label': 'Rupay Credit on UPI', 'screen': LoanView()},
+                        {'icon': Icons.local_atm, 'label': 'Credit Line on UPI', 'screen': LoanView()},
                       ];
 
                       return PaymentMethodItem(
                         icon: paymentMethods[index]['icon'] as IconData,
                         label: paymentMethods[index]['label'] as String,
+                        destination: paymentMethods[index]['screen'] as Widget,
                       );
                     },
                   ),
@@ -277,14 +279,15 @@ class ProfileView extends GetView<ProfileController> {
               itemCount: 3, // Total number of payment management options
               itemBuilder: (context, index) {
                 final paymentManagementOptions = [
-                  {'icon': Icons.autorenew, 'label': 'Auto Pay'},
-                  {'icon': Icons.language, 'label': 'International'},
-                  {'icon': Icons.settings, 'label': 'UPI Settings'},
+                  {'icon': Icons.autorenew, 'label': 'Auto Pay','screen': LoanView()},
+                  {'icon': Icons.language, 'label': 'International','screen': LoanView()},
+                  {'icon': Icons.settings, 'label': 'UPI Settings','screen': LoanView()},
                 ];
 
                 return PaymentMethodItem(
                   icon: paymentManagementOptions[index]['icon'] as IconData,
                   label: paymentManagementOptions[index]['label'] as String,
+                  destination: paymentManagementOptions[index]['screen'] as Widget,
                 );
               },
             ),
@@ -559,16 +562,22 @@ class ProfileView extends GetView<ProfileController> {
 class PaymentMethodItem extends StatelessWidget {
   final IconData icon;
   final String label;
+  final Widget destination;
 
   const PaymentMethodItem({
     required this.icon,
     required this.label,
+    required this.destination,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return GestureDetector(
+      onTap: () {
+        Get.to(destination); // Navigate to the destination screen
+      },
+    child: Column(
+    children: [
         Icon(
           icon,  // Icon passed as parameter
           color: Color(0xFF007f97),  // Icon color
@@ -585,6 +594,7 @@ class PaymentMethodItem extends StatelessWidget {
   // Max 2 lines for the text
         ),
       ],
+    ),
     );
   }
 }

@@ -45,6 +45,13 @@ abstract class Routes {
   static const GOLDLOAN = _Paths.GOLDLOAN;
   static const MUTUALFUNDLOAN = _Paths.MUTUALFUNDLOAN;
   static const CREDITSCORE = _Paths.CREDITSCORE;
+  static const TOPPERFORMING = _Paths.TOPPERFORMING;
+  static const LARGECAPFUNDS = _Paths.LARGECAPFUNDS;
+  static const STARTWITH = _Paths.STARTWITH;
+  static const BESTSIPFUNDS = _Paths.BESTSIPFUNDS;
+  static const RECEIVEMONEY = _Paths.RECEIVEMONEY;
+  static const PHONEPEWALLET = _Paths.PHONEPEWALLET;
+  static const PHONEPEGIFTCARD = _Paths.PHONEPEGIFTCARD;
 }
 
 abstract class _Paths {
@@ -93,4 +100,11 @@ abstract class _Paths {
   static const GOLDLOAN = '/goldloan';
   static const MUTUALFUNDLOAN = '/mutualfundloan';
   static const CREDITSCORE = '/creditscore';
+  static const TOPPERFORMING = '/topperforming';
+  static const LARGECAPFUNDS = '/largecapfunds';
+  static const STARTWITH = '/startwith';
+  static const BESTSIPFUNDS = '/bestsipfunds';
+  static const RECEIVEMONEY = '/receivemoney';
+  static const PHONEPEWALLET = '/phonepewallet';
+  static const PHONEPEGIFTCARD = '/phonepegiftcard';
 }

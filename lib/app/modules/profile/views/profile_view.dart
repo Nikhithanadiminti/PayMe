@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Login/views/login_view.dart';
 import '../../profileDetails/views/profile_details_view.dart';
+import '../../receivemoney/views/receivemoney_view.dart';
 import '../controllers/profile_controller.dart';
+//import '../controllers/receivemoney_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({super.key});
@@ -167,15 +169,22 @@ class ProfileView extends GetView<ProfileController> {
                       ),
                     ],
                   ),
-                  Spacer(),  // Push the chevron icon to the right corner
-                  Icon(
-                    Icons.chevron_right,  // Chevron-right icon
-                    color: Color(0xFF007f97),
-                    size: 36,  // Icon size
+                  Spacer(),
+                  InkWell(
+                    onTap: () {
+                      // Navigate to the ProfileDetails page when clicked
+                      Get.to(ReceivemoneyView());
+                    },
+                    child: Icon(
+                      Icons.chevron_right,
+                      color: Color(0xFF007f97),
+                      size: 36,
+                    ),
                   ),
                 ],
               ),
             ),
+
             SizedBox(height: 10),
 
             // Payment Methods Section

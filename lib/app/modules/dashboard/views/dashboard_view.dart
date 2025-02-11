@@ -3,7 +3,6 @@
 import 'package:demo_project/app/modules/bills_and_recharges/views/bills_and_recharges_view.dart';
 import 'package:demo_project/app/modules/footer/views/footer_view.dart';
 import 'package:demo_project/app/modules/header/views/header_view.dart';
-import 'package:demo_project/app/modules/toMobileNumber/views/to_mobile_number_view.dart';
 import 'package:demo_project/app/modules/to_bank_upi_id/views/to_bank_upi_id_view.dart';
 import 'package:demo_project/app/modules/to_self_account/views/to_self_account_view.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +25,7 @@ import '../../receivemoney/views/receivemoney_view.dart';
 import '../../rent/views/rent_view.dart';
 import '../../startwith/views/startwith_view.dart';
 import '../../topperforming/views/topperforming_view.dart';
+import '../../to_mobile_no/views/to_mobile_no_view.dart';
 import '../../transit_and_food/views/transit_and_food_view.dart';
 import '../../travel/views/travel_view.dart';
 import '../controllers/dashboard_controller.dart';
@@ -179,7 +179,6 @@ class DashboardView extends GetView<DashboardController> {
                       GestureDetector(
                           onTap: () {
                             // Add your action for "Try Now" here
-                            //Get.to(ReceivemoneyView());
                           },
 
                           child: Row(
@@ -958,7 +957,6 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Best SIP\nFunds',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
-                                  Get.to(BestsipfundsView());
                                 },
 
                               ),
@@ -967,7 +965,6 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Start With\n₹100',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
-                                  Get.to(StartwithView());
                                 },
                               ),
                               _buildNavigableIcon1(
@@ -975,14 +972,12 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Large Cap\nFunds',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
-                                  Get.to(LargecapfundsView());
                                 },
                               ),
                               _buildNavigableIcon1(
                                 icon: Icons.show_chart,
                                 label: 'Top Performing...',
                                 onTap: () {
-                                  Get.to(TopperformingView());
                                   // Get.to(() => const ToMobileNumberPage());
                                 },
                               ),

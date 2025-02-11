@@ -11,7 +11,6 @@ class AddUpiIdController extends GetxController {
   RxBool isUpiIdValid = false.obs;
   RxBool isButtonClicked = false.obs;
 
-
   @override
   void onInit() {
     super.onInit();
@@ -34,6 +33,8 @@ class AddUpiIdController extends GetxController {
     }
   }
 
+
+
   void verifyUpiId() {
     // Display additional fields upon successful verification
     showAdditionalFields.value = true;
@@ -44,6 +45,7 @@ class AddUpiIdController extends GetxController {
     // Unfocus the text field after verification
     focusNode.unfocus();
   }
+
 
   @override
   void onClose() {

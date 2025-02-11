@@ -6,8 +6,6 @@ import '../modules/add_upi_id/bindings/add_upi_id_binding.dart';
 import '../modules/add_upi_id/views/add_upi_id_view.dart';
 import '../modules/additionalDetails/bindings/additional_details_binding.dart';
 import '../modules/additionalDetails/views/additional_details_view.dart';
-import '../modules/bestsipfunds/bindings/bestsipfunds_binding.dart';
-import '../modules/bestsipfunds/views/bestsipfunds_view.dart';
 import '../modules/bikeloan/bindings/bikeloan_binding.dart';
 import '../modules/bikeloan/views/bikeloan_view.dart';
 import '../modules/bills_and_recharges/bindings/bills_and_recharges_binding.dart';
@@ -32,18 +30,12 @@ import '../modules/header/bindings/header_binding.dart';
 import '../modules/header/views/header_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/largecapfunds/bindings/largecapfunds_binding.dart';
-import '../modules/largecapfunds/views/largecapfunds_view.dart';
 import '../modules/loan/bindings/loan_binding.dart';
 import '../modules/loan/views/loan_view.dart';
 import '../modules/mutualfundloan/bindings/mutualfundloan_binding.dart';
 import '../modules/mutualfundloan/views/mutualfundloan_view.dart';
 import '../modules/otpVerification/bindings/otp_verification_binding.dart';
 import '../modules/otpVerification/views/otp_verification_view.dart';
-import '../modules/phonepegiftcard/bindings/phonepegiftcard_binding.dart';
-import '../modules/phonepegiftcard/views/phonepegiftcard_view.dart';
-import '../modules/phonepewallet/bindings/phonepewallet_binding.dart';
-import '../modules/phonepewallet/views/phonepewallet_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/profileDetails/bindings/profile_details_binding.dart';
@@ -54,6 +46,12 @@ import '../modules/purchases/bindings/purchases_binding.dart';
 import '../modules/purchases/views/purchases_view.dart';
 import '../modules/qr_code_scanner/bindings/qr_code_scanner_binding.dart';
 import '../modules/qr_code_scanner/views/qr_code_scanner_view.dart';
+import '../modules/scanned_payment_details/bindings/scanned_payment_details_binding.dart';
+import '../modules/scanned_payment_details/views/scanned_payment_details_view.dart';
+import '../modules/to_mobile_no/bindings/to_mobile_no_binding.dart';
+import '../modules/to_mobile_no/views/to_mobile_no_view.dart';
+import '../modules/to_mobile_num_payment_details/bindings/to_mobile_num_payment_details_binding.dart';
+import '../modules/to_mobile_num_payment_details/views/to_mobile_num_payment_details_view.dart';
 import '../modules/questionnaire/bindings/questionnaire_binding.dart';
 import '../modules/questionnaire/views/questionnaire_view.dart';
 import '../modules/receivemoney/bindings/receivemoney_binding.dart';
@@ -70,9 +68,6 @@ import '../modules/transit_and_food/bindings/transit_and_food_binding.dart';
 import '../modules/transit_and_food/views/transit_and_food_view.dart';
 import '../modules/travel/bindings/travel_binding.dart';
 import '../modules/travel/views/travel_view.dart';
-
-// import '../modules/piped_gas/bindings/piped_gas_binding.dart';
-// import '../modules/piped_gas/views/piped_gas_view.dart';
 
 part 'app_routes.dart';
 
@@ -157,11 +152,11 @@ class AppPages {
       page: () => const QuestionnaireView(),
       binding: QuestionnaireBinding(),
     ),
-    GetPage(
-      name: _Paths.TO_MOBILE_NUMBER,
-      page: () => const ToMobileNumberView(),
-      binding: ToMobileNumberBinding(),
-    ),
+    // GetPage(
+    //   name: _Paths.TO_MOBILE_NUMBER,
+    //   page: () => const ToMobileNumberView(),
+    //   binding: ToMobileNumberBinding(),
+    // ),
     GetPage(
       name: _Paths.CREDIT_CARD_REPAYMENT,
       page: () => const CreditCardRepaymentView(),
@@ -231,41 +226,6 @@ class AppPages {
       name: _Paths.CREDITSCORE,
       page: () => const CreditscoreView(),
       binding: CreditscoreBinding(),
-    ),
-    GetPage(
-      name: _Paths.TOPPERFORMING,
-      page: () => const TopperformingView(),
-      binding: TopperformingBinding(),
-    ),
-    GetPage(
-      name: _Paths.LARGECAPFUNDS,
-      page: () => const LargecapfundsView(),
-      binding: LargecapfundsBinding(),
-    ),
-    GetPage(
-      name: _Paths.STARTWITH,
-      page: () => const StartwithView(),
-      binding: StartwithBinding(),
-    ),
-    GetPage(
-      name: _Paths.BESTSIPFUNDS,
-      page: () => const BestsipfundsView(),
-      binding: BestsipfundsBinding(),
-    ),
-    GetPage(
-      name: _Paths.RECEIVEMONEY,
-      page: () => const ReceivemoneyView(),
-      binding: ReceivemoneyBinding(),
-    ),
-    GetPage(
-      name: _Paths.PHONEPEWALLET,
-      page: () => const PhonepewalletView(),
-      binding: PhonepewalletBinding(),
-    ),
-    GetPage(
-      name: _Paths.PHONEPEGIFTCARD,
-      page: () => const PhonepegiftcardView(),
-      binding: PhonepegiftcardBinding(),
     ),
   ];
 }

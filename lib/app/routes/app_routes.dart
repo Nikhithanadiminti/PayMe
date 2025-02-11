@@ -27,6 +27,11 @@ abstract class Routes {
       _Paths.SELECT_RECEIVER_BANK_ACCOUNT;
   static const ADD_UPI_NUMBER = _Paths.ADD_UPI_NUMBER;
   static const ADD_UPI_ID = _Paths.ADD_UPI_ID;
+  static const QR_CODE_SCANNER = _Paths.QR_CODE_SCANNER;
+  static const SCANNED_PAYMENT_DETAILS = _Paths.SCANNED_PAYMENT_DETAILS;
+  static const TO_MOBILE_NO = _Paths.TO_MOBILE_NO;
+  static const TO_MOBILE_NUM_PAYMENT_DETAILS =
+      _Paths.TO_MOBILE_NUM_PAYMENT_DETAILS;
   // static const QR_CODE_SCANNER = _Paths.QR_CODE_SCANNER;
   static const QUESTIONNAIRE = _Paths.QUESTIONNAIRE;
   static const TO_MOBILE_NUMBER = _Paths.TO_MOBILE_NUMBER;
@@ -100,11 +105,4 @@ abstract class _Paths {
   static const GOLDLOAN = '/goldloan';
   static const MUTUALFUNDLOAN = '/mutualfundloan';
   static const CREDITSCORE = '/creditscore';
-  static const TOPPERFORMING = '/topperforming';
-  static const LARGECAPFUNDS = '/largecapfunds';
-  static const STARTWITH = '/startwith';
-  static const BESTSIPFUNDS = '/bestsipfunds';
-  static const RECEIVEMONEY = '/receivemoney';
-  static const PHONEPEWALLET = '/phonepewallet';
-  static const PHONEPEGIFTCARD = '/phonepegiftcard';
 }

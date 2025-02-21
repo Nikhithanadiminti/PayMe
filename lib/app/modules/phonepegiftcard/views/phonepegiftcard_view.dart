@@ -9,7 +9,7 @@ class PhonepegiftcardView extends GetView<PhonepegiftcardController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF007f97),
+      backgroundColor: Color(0xFFFFFFFF),
       appBar: AppBar(
         backgroundColor: Color(0xFF007f97),
         elevation: 0,

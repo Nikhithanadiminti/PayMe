@@ -91,7 +91,7 @@ class DashboardView extends GetView<DashboardController> {
                                 icon: Icons.person,
                                 label: 'To Mobile\nNumber',
                                 onTap: () {
-                                  Get.to(() => const ToMobileNumberView());
+                                  Get.to(() => const ToMobileNoView());
                                 },
                                 notificationDot: true,
 
@@ -957,6 +957,7 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Best SIP\nFunds',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(BestsipfundsView());
                                 },
 
                               ),
@@ -965,6 +966,7 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Start With\n₹100',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(StartwithView());
                                 },
                               ),
                               _buildNavigableIcon1(
@@ -972,6 +974,7 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Large Cap\nFunds',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(LargecapfundsView());
                                 },
                               ),
                               _buildNavigableIcon1(
@@ -979,6 +982,7 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Top Performing...',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(TopperformingView());
                                 },
                               ),
                             ],

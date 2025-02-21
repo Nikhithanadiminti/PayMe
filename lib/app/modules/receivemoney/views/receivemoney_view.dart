@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 
@@ -6,111 +7,201 @@ import '../controllers/receivemoney_controller.dart';
 
 class ReceivemoneyView extends GetView<ReceivemoneyController> {
   const ReceivemoneyView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF007f97),
       appBar: AppBar(
-        backgroundColor: Color(0xFF007f97),
-        title: Text('Receive Money', style: TextStyle(color: Colors.white)),
-        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: const Color(0xFF007f97),
+        title: const Text("Receive Money", style: TextStyle(color: Colors.white)),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
         actions: [
           IconButton(
-            icon: Icon(Icons.help_outline, color: Colors.white),
+            icon: const Icon(Icons.help_outline, color: Colors.white),
             onPressed: () {},
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text('From any UPI app',
-                style: TextStyle(color: Colors.white70, fontSize: 16)),
-            SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
+        children: [
+          // Blue background section
+          Container(
+            width: double.infinity,
+            color: const Color(0xFF007f97), // Blue background
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 _buildIcon('assets/images/phonepe.png'),
-                _buildIcon('assets/images/bhim.png'),
-                 _buildIcon('assets/images/gpay.png'),
-                 _buildIcon('assets/images/paytm.png'),
-
+                const Text(
+                  "From any UPI app",
+                  style: TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 5),
+                Row(
+                  children: [
+                    Image.asset("assets/images/phonepe.png", width: 22),
+                    const SizedBox(width: 7),
+                    Image.asset("assets/images/bhiim.png", width: 24),
+                    const SizedBox(width: 10),
+                    Image.asset("assets/images/gpayy.png", width: 28),
+                    const SizedBox(width: 8),
+                    Image.asset("assets/images/paytm.png", width: 28),
+                  ],
+                ),
               ],
             ),
-            SizedBox(height: 16),
-            Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12)),
-              child: ListTile(
-                leading: Image.asset('assets/images/kotaak.png', width: 40),
-                title: Text('Kotak Mahi...ank - 8419',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
-                trailing: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(20),
+          ),
+
+          const SizedBox(height: 15),
+
+          // White background starts here
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              color: Colors.white, // White background
+              child: Column(
+                children: [
+                  // Bank Details - Kotak Bank
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [BoxShadow(color: Colors.grey.shade300, blurRadius: 4)],
+                    ),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/kotaak.png"),
+                      ),
+                      title: const Text(
+                        "Kotak Mahindra Bank - 8419",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
+                      trailing: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: const Text(
+                          "Primary",
+                          style: TextStyle(fontSize: 12, color: Colors.white),
+                        ),
+                      ),
+                    ),
                   ),
-                  child: Text('Primary',
-                      style: TextStyle(color: Colors.white, fontSize: 12)),
-                ),
+
+                  const SizedBox(height: 15),
+
+                  // QR Code Section
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    color: Colors.white,
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/qr_code.png",
+                          width: 190,
+                          height: 190,
+                        ),
+                        const SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            _actionButton(Icons.share, "Share QR", Colors.blue),
+                            _actionButton(Icons.download, "Download QR", Colors.blue),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(height: 15),
+
+                  // UPI IDs Section
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("UPI IDs and Numbers",
+                            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                        Text("MANAGE",
+                            style: TextStyle(color: Colors.blue, fontSize: 12)),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(height: 8),
+
+                  _upiTile("vydapadmavathi@ybl", "Displayed on home"),
+                  _upiTile("vydapadmavathi@axl", ""),
+
+                  const Spacer(),
+
+                  // UPI Powered Logo
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 6),
+                    child: Image(
+                      image: AssetImage("assets/images/upi.png"),
+                      width: 7,
+                      color: Colors.grey, // UPI logo changed to grey
+                    ),
+                  ),
+                ],
               ),
             ),
-            SizedBox(height: 16),
-            Image.asset('assets/images/qr_code.png', width: 200, height: 200),
-            SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _buildTextButton(Icons.share, 'SHARE QR'),
-                _buildTextButton(Icons.download, 'DOWNLOAD QR'),
-              ],
-            ),
-            SizedBox(height: 16),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text('UPI IDs and Numbers',
-                  style: TextStyle(color: Colors.white, fontSize: 16)),
-            ),
-            SizedBox(height: 8),
-            _buildUpiTile('vydapadmavathi@ybl', true),
-            _buildUpiTile('vydapadmavathi@axl', false),
-          ],
-        ),
+          ),
+        ],
       ),
+      backgroundColor: Colors.white, // Ensure full background remains white
     );
   }
 
-  Widget _buildIcon(String assetPath) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: Image.asset(assetPath, width: 40, height: 40),
+  // Action Button Widget
+  Widget _actionButton(IconData icon, String label, Color color) {
+    return Column(
+      children: [
+        Icon(icon, size: 24, color: color),
+        const SizedBox(height: 8, width: 35),
+        Text(label, style: TextStyle(fontSize: 12, color: color)),
+      ],
     );
   }
 
-  Widget _buildTextButton(IconData icon, String text) {
-    return TextButton.icon(
-      onPressed: () {},
-      icon: Icon(icon, color: Colors.white),
-      label: Text(text, style: TextStyle(color: Colors.white)),
-    );
-  }
-
-  Widget _buildUpiTile(String upiId, bool isPrimary) {
-    return Card(
-      color: Colors.white24,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      child: ListTile(
-        title: Text(upiId, style: TextStyle(color: Colors.white)),
-        subtitle: isPrimary
-            ? Text('Displayed on home',
-            style: TextStyle(color: Colors.white70, fontSize: 12))
-            : null,
-        trailing: Icon(Icons.copy, color: Colors.white),
+  // UPI ID Tile
+  Widget _upiTile(String upiId, String subtitle) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8),
+        boxShadow: [BoxShadow(color: Colors.grey.shade300, blurRadius: 4)],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(upiId, style: const TextStyle(fontSize: 14)),
+              if (subtitle.isNotEmpty)
+                Text(subtitle, style: TextStyle(fontSize: 12, color: Colors.grey)),
+            ],
+          ),
+          IconButton(
+            icon: const Icon(Icons.copy, size: 20, color: Colors.grey),
+            onPressed: () {
+              Clipboard.setData(ClipboardData(text: upiId));
+            },
+          ),
+        ],
       ),
     );
   }
 }
-

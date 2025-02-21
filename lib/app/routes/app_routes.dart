@@ -34,7 +34,6 @@ abstract class Routes {
       _Paths.TO_MOBILE_NUM_PAYMENT_DETAILS;
   // static const QR_CODE_SCANNER = _Paths.QR_CODE_SCANNER;
   static const QUESTIONNAIRE = _Paths.QUESTIONNAIRE;
-  static const TO_MOBILE_NUMBER = _Paths.TO_MOBILE_NUMBER;
   static const CREDIT_CARD_REPAYMENT = _Paths.CREDIT_CARD_REPAYMENT;
   static const RENT = _Paths.RENT;
   static const BILLS_RECHARGES = _Paths.BILLS_RECHARGES;
@@ -45,6 +44,26 @@ abstract class Routes {
   static const FASTAG_RECHARGE = _Paths.FASTAG_RECHARGE;
   static const DTH = _Paths.DTH;
   static const PIPED_GAS = _Paths.PIPED_GAS;
+  static const LOAN = _Paths.LOAN;
+  static const BIKELOAN = _Paths.BIKELOAN;
+  static const GOLDLOAN = _Paths.GOLDLOAN;
+  static const MUTUALFUNDLOAN = _Paths.MUTUALFUNDLOAN;
+  static const CREDITSCORE = _Paths.CREDITSCORE;
+  static const TOPPERFORMING = _Paths.TOPPERFORMING;
+  static const LARGECAPFUNDS = _Paths.LARGECAPFUNDS;
+  static const STARTWITH = _Paths.STARTWITH;
+  static const BESTSIPFUNDS = _Paths.BESTSIPFUNDS;
+  static const RECEIVEMONEY = _Paths.RECEIVEMONEY;
+  static const PHONEPEWALLET = _Paths.PHONEPEWALLET;
+  static const PHONEPEGIFTCARD = _Paths.PHONEPEGIFTCARD;
+  static const BANKACCOUNTS = _Paths.BANKACCOUNTS;
+  static const RUPAYCREDITONUPI = _Paths.RUPAYCREDITONUPI;
+  static const CREDITLINEONUPI = _Paths.CREDITLINEONUPI;
+  static const UPILITE = _Paths.UPILITE;
+  static const AUTOPAY = _Paths.AUTOPAY;
+  static const DEBITANDCREDITCARDS = _Paths.DEBITANDCREDITCARDS;
+  static const INTERNATIONAL = _Paths.INTERNATIONAL;
+  static const UPISETTINGS = _Paths.UPISETTINGS;
 }
 
 abstract class _Paths {
@@ -69,12 +88,8 @@ abstract class _Paths {
   static const ADD_UPI_NUMBER = '/add-upi-number';
   static const ADD_UPI_ID = '/add-upi-id';
   static const QR_CODE_SCANNER = '/qr-code-scanner';
-  static const SCANNED_PAYMENT_DETAILS = '/scanned-payment-details';
-  static const TO_MOBILE_NO = '/to-mobile-no';
-  static const TO_MOBILE_NUM_PAYMENT_DETAILS = '/to-mobile-num-payment-details';
-  // static const QR_CODE_SCANNER = '/qr-code-scanner';
   static const QUESTIONNAIRE = '/questionnaire';
-  static const TO_MOBILE_NUMBER = '/to-mobile-number';
+  static const TO_MOBILE_NO = '/to-mobile_no';
 
   static const TRANSACTIONS = '/transactions';
   static const DOWNLOAD = '/download';
@@ -97,4 +112,21 @@ abstract class _Paths {
   static const GOLDLOAN = '/goldloan';
   static const MUTUALFUNDLOAN = '/mutualfundloan';
   static const CREDITSCORE = '/creditscore';
+  static const TOPPERFORMING = '/topperforming';
+  static const LARGECAPFUNDS = '/largecapfunds';
+  static const STARTWITH = '/startwith';
+  static const BESTSIPFUNDS = '/bestsipfunds';
+  static const RECEIVEMONEY = '/receivemoney';
+  static const PHONEPEWALLET = '/phonepewallet';
+  static const PHONEPEGIFTCARD = '/phoneprgiftcard';
+  static const SCANNED_PAYMENT_DETAILS = '/scanned_payment_details';
+  static const TO_MOBILE_NUM_PAYMENT_DETAILS = '/to_mobile_num_payment_details';
+  static const BANKACCOUNTS = '/bankaccounts';
+  static const RUPAYCREDITONUPI = '/rupaycreditonupi';
+  static const CREDITLINEONUPI = '/creditlineonupi';
+  static const UPILITE = '/upilite';
+  static const AUTOPAY = '/autopay';
+  static const DEBITANDCREDITCARDS = '/debitandcreditcards';
+  static const INTERNATIONAL = '/international';
+  static const UPISETTINGS = '/upisettings';
 }

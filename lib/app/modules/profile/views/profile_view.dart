@@ -1,8 +1,21 @@
+import 'package:demo_project/app/modules/loan/views/loan_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Login/views/login_view.dart';
+import '../../autopay/views/autopay_view.dart';
+import '../../bankaccounts/views/bankaccounts_view.dart';
+import '../../creditlineonupi/views/creditlineonupi_view.dart';
+import '../../debitandcreditcards/views/debitandcreditcards_view.dart';
+import '../../international/views/international_view.dart';
+import '../../phonepegiftcard/views/phonepegiftcard_view.dart';
+import '../../phonepewallet/views/phonepewallet_view.dart';
 import '../../profileDetails/views/profile_details_view.dart';
+import '../../receivemoney/views/receivemoney_view.dart';
+import '../../rupaycreditonupi/views/rupaycreditonupi_view.dart';
+import '../../upilite/views/upilite_view.dart';
+import '../../upisettings/views/upisettings_view.dart';
 import '../controllers/profile_controller.dart';
+//import '../controllers/receivemoney_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({super.key});
@@ -167,15 +180,22 @@ class ProfileView extends GetView<ProfileController> {
                       ),
                     ],
                   ),
-                  Spacer(),  // Push the chevron icon to the right corner
-                  Icon(
-                    Icons.chevron_right,  // Chevron-right icon
-                    color: Color(0xFF007f97),
-                    size: 36,  // Icon size
+                  Spacer(),
+                  InkWell(
+                    onTap: () {
+                      // Navigate to the ProfileDetails page when clicked
+                      Get.to(ReceivemoneyView());
+                    },
+                    child: Icon(
+                      Icons.chevron_right,
+                      color: Color(0xFF007f97),
+                      size: 36,
+                    ),
                   ),
                 ],
               ),
             ),
+
             SizedBox(height: 10),
 
             // Payment Methods Section
@@ -218,18 +238,19 @@ class ProfileView extends GetView<ProfileController> {
                     itemCount: 7, // Total number of payment methods
                     itemBuilder: (context, index) {
                       final paymentMethods = [
-                        {'icon': Icons.account_balance, 'label': 'Bank Accounts'},
-                        {'icon': Icons.credit_card, 'label': 'Debit & Credit Cards'},
-                        {'icon': Icons.phone_android, 'label': 'PayMe Wallet'},
-                        {'icon': Icons.card_giftcard, 'label': 'PayMe Gift Card'},
-                        {'icon': Icons.upgrade, 'label': 'UPI Lite'},
-                        {'icon': Icons.credit_card_rounded, 'label': 'Rupay Credit on UPI'},
-                        {'icon': Icons.local_atm, 'label': 'Credit Line on UPI'},
+                        {'icon': Icons.account_balance, 'label': 'Bank Accounts', 'screen': BankaccountsView()},
+                        {'icon': Icons.credit_card, 'label': 'Debit & Credit Cards', 'screen': DebitandcreditcardsView()},
+                        {'icon': Icons.phone_android, 'label': 'PayMe Wallet', 'screen': PhonepewalletView()},
+                        {'icon': Icons.card_giftcard, 'label': 'PayMe Gift Card', 'screen': PhonepegiftcardView()},
+                        {'icon': Icons.upgrade, 'label': 'UPI Lite', 'screen': UpiliteView()},
+                        {'icon': Icons.credit_card_rounded, 'label': 'Rupay Credit on UPI', 'screen': RupaycreditonupiView()},
+                        {'icon': Icons.local_atm, 'label': 'Credit Line on UPI', 'screen': CreditlineonupiView()},
                       ];
 
                       return PaymentMethodItem(
                         icon: paymentMethods[index]['icon'] as IconData,
                         label: paymentMethods[index]['label'] as String,
+                        destination: paymentMethods[index]['screen'] as Widget,
                       );
                     },
                   ),
@@ -277,14 +298,15 @@ class ProfileView extends GetView<ProfileController> {
               itemCount: 3, // Total number of payment management options
               itemBuilder: (context, index) {
                 final paymentManagementOptions = [
-                  {'icon': Icons.autorenew, 'label': 'Auto Pay'},
-                  {'icon': Icons.language, 'label': 'International'},
-                  {'icon': Icons.settings, 'label': 'UPI Settings'},
+                  {'icon': Icons.autorenew, 'label': 'Auto Pay','screen': AutopayView()},
+                  {'icon': Icons.language, 'label': 'International','screen': InternationalView()},
+                  {'icon': Icons.settings, 'label': 'UPI Settings','screen': UpisettingsView()},
                 ];
 
                 return PaymentMethodItem(
                   icon: paymentManagementOptions[index]['icon'] as IconData,
                   label: paymentManagementOptions[index]['label'] as String,
+                  destination: paymentManagementOptions[index]['screen'] as Widget,
                 );
               },
             ),
@@ -555,20 +577,29 @@ class ProfileView extends GetView<ProfileController> {
   }
 }
 
+class CreditloneonupiView {
+}
+
 // Custom widget for displaying Payment Method Items
 class PaymentMethodItem extends StatelessWidget {
   final IconData icon;
   final String label;
+  final Widget destination;
 
   const PaymentMethodItem({
     required this.icon,
     required this.label,
+    required this.destination,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return GestureDetector(
+      onTap: () {
+        Get.to(destination); // Navigate to the destination screen
+      },
+    child: Column(
+    children: [
         Icon(
           icon,  // Icon passed as parameter
           color: Color(0xFF007f97),  // Icon color
@@ -585,6 +616,7 @@ class PaymentMethodItem extends StatelessWidget {
   // Max 2 lines for the text
         ),
       ],
+    ),
     );
   }
 }

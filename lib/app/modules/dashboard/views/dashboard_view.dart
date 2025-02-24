@@ -12,15 +12,20 @@ import 'package:url_launcher/url_launcher.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
 
+import '../../bestsipfunds/views/bestsipfunds_view.dart';
 import '../../bikeloan/views/bikeloan_view.dart';
 import '../../credit_card_repayment/views/credit_card_repayment_view.dart';
 import '../../creditscore/views/creditscore_view.dart';
 import '../../goldloan/views/goldloan_view.dart';
+import '../../largecapfunds/views/largecapfunds_view.dart';
 import '../../loan_repayment/views/loan_repayment_view.dart';
 import '../../mobile_recharge/views/mobile_recharge_view.dart';
 import '../../mutualfundloan/views/mutualfundloan_view.dart';
 import '../../purchases/views/purchases_view.dart';
+import '../../receivemoney/views/receivemoney_view.dart';
 import '../../rent/views/rent_view.dart';
+import '../../startwith/views/startwith_view.dart';
+import '../../topperforming/views/topperforming_view.dart';
 import '../../to_mobile_no/views/to_mobile_no_view.dart';
 import '../../transit_and_food/views/transit_and_food_view.dart';
 import '../../travel/views/travel_view.dart';
@@ -949,6 +954,7 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Best SIP\nFunds',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(BestsipfundsView());
                                 },
 
                               ),
@@ -957,6 +963,7 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Start With\n₹100',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(StartwithView());
                                 },
                               ),
                               _buildNavigableIcon1(
@@ -964,6 +971,7 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Large Cap\nFunds',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(LargecapfundsView());
                                 },
                               ),
                               _buildNavigableIcon1(
@@ -971,6 +979,7 @@ class DashboardView extends GetView<DashboardController> {
                                 label: 'Top Performing...',
                                 onTap: () {
                                   // Get.to(() => const ToMobileNumberPage());
+                                  Get.to(TopperformingView());
                                 },
                               ),
                             ],

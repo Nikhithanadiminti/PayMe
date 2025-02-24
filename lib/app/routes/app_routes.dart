@@ -44,6 +44,12 @@ abstract class Routes {
   static const FASTAG_RECHARGE = _Paths.FASTAG_RECHARGE;
   static const DTH = _Paths.DTH;
   static const PIPED_GAS = _Paths.PIPED_GAS;
+  static const CABLE_TV = _Paths.CABLE_TV;
+  static const BOOK_A_CYLINDER = _Paths.BOOK_A_CYLINDER;
+  static const BROADBAND_LANDLINE = _Paths.BROADBAND_LANDLINE;
+  static const POSTPAID = _Paths.POSTPAID;
+  static const WATER = _Paths.WATER;
+  static const ELECTRICITY = _Paths.ELECTRICITY;
   static const LOAN = _Paths.LOAN;
   static const BIKELOAN = _Paths.BIKELOAN;
   static const GOLDLOAN = _Paths.GOLDLOAN;
@@ -112,6 +118,12 @@ abstract class _Paths {
   static const GOLDLOAN = '/goldloan';
   static const MUTUALFUNDLOAN = '/mutualfundloan';
   static const CREDITSCORE = '/creditscore';
+  static const CABLE_TV = '/cable-tv';
+  static const BOOK_A_CYLINDER = '/book-a-cylinder';
+  static const BROADBAND_LANDLINE = '/broadband-landline';
+  static const POSTPAID = '/postpaid';
+  static const WATER = '/water';
+  static const ELECTRICITY = '/electricity';
   static const TOPPERFORMING = '/topperforming';
   static const LARGECAPFUNDS = '/largecapfunds';
   static const STARTWITH = '/startwith';

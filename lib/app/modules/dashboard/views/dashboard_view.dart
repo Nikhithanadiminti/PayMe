@@ -8,6 +8,7 @@ import 'package:demo_project/app/modules/to_self_account/views/to_self_account_v
 import 'package:flutter/material.dart';
 import 'package:demo_project/app/modules/loan/views/loan_view.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
 
@@ -708,8 +709,6 @@ class DashboardView extends GetView<DashboardController> {
                               ),
                             ],
                           ),
-
-
                         ],
                       ),
                     )
@@ -804,7 +803,6 @@ class DashboardView extends GetView<DashboardController> {
                                   ),
                                 ),
                               ),
-
                             ],
                           ),
 
@@ -852,7 +850,6 @@ class DashboardView extends GetView<DashboardController> {
 
                   ],
                 ),
-
 
                 SizedBox(height: 16),
 
@@ -1093,33 +1090,24 @@ class DashboardView extends GetView<DashboardController> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               _buildNavigableIcon1(
-                                icon: Icons.flight_takeoff,
-                                label: 'Flights',
-                                onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
-                                },
-
+                                icon: Icons.credit_card,
+                                label: 'Buy FASTag',
+                                url : "https://v.hdfcbank.com/htdocs/common/fastag/index.html",
                               ),
                               _buildNavigableIcon1(
-                                icon: Icons.directions_bus,
-                                label: 'Bus',
-                                onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
-                                },
+                                icon: Icons.directions_subway,
+                                label: 'Metro',
+                                url: "https://www.ltmetro.com/",
                               ),
                               _buildNavigableIcon1(
-                                icon: Icons.directions_train_outlined,
-                                label: 'Trains',
-                                onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
-                                },
+                                icon: Icons.directions_car,
+                                label: 'Recharge\nFASTag',
+                                url: 'https://fastag.hdfcbank.com/CustomerPortal/Login',
                               ),
                               _buildNavigableIcon1(
-                                icon: Icons.business,
-                                label: 'Hotels',
-                                onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
-                                },
+                                icon: Icons.car_repair,
+                                label: 'Roadside\nAssistance',
+                                url:'https://www.crossroadshelpline.com/',
                               ),
                             ],
                           ),
@@ -1295,32 +1283,26 @@ class DashboardView extends GetView<DashboardController> {
                             children: [
                               _buildNavigableIcon1(
                                 icon: Icons.credit_card,
-                                label: 'Buy FASTag',
-                                onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
-                                },
+                                onTap: (){
 
+                                },
+                                label: 'Buy FASTag',
+                                url : "https://v.hdfcbank.com/htdocs/common/fastag/index.html",
                               ),
                               _buildNavigableIcon1(
                                 icon: Icons.directions_subway,
                                 label: 'Metro',
-                                onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
-                                },
+                                url: "https://www.ltmetro.com/",
                               ),
                               _buildNavigableIcon1(
                                 icon: Icons.directions_car,
                                 label: 'Recharge\nFASTag',
-                                onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
-                                },
+                                url: 'https://fastag.hdfcbank.com/CustomerPortal/Login',
                               ),
                               _buildNavigableIcon1(
                                 icon: Icons.car_repair,
                                 label: 'Roadside\nAssistance',
-                                onTap: () {
-                                  // Get.to(() => const ToMobileNumberPage());
-                                },
+                                url:'https://www.crossroadshelpline.com/',
                               ),
                             ],
                           ),
@@ -1545,10 +1527,14 @@ class DashboardView extends GetView<DashboardController> {
     required IconData icon,
     required String label,
     bool notificationDot = false,
-    required VoidCallback onTap,
+    VoidCallback? onTap,
+    String? url
   }) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: url != null && url != "" ?
+          () {
+        if (url != null) _launchUrl(url);
+      } : onTap,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         // Ensures that the column takes minimal space
@@ -1585,5 +1571,10 @@ class DashboardView extends GetView<DashboardController> {
       ),
     );
   }
-
+  Future<void> _launchUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      debugPrint("Could not launch $url");
+    }
+  }
 }

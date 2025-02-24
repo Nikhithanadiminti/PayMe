@@ -14,6 +14,12 @@ import '../modules/bikeloan/bindings/bikeloan_binding.dart';
 import '../modules/bikeloan/views/bikeloan_view.dart';
 import '../modules/bills_and_recharges/bindings/bills_and_recharges_binding.dart';
 import '../modules/bills_and_recharges/views/bills_and_recharges_view.dart';
+import '../modules/book_a_cylinder/bindings/book_a_cylinder_binding.dart';
+import '../modules/book_a_cylinder/views/book_a_cylinder_view.dart';
+import '../modules/broadband_landline/bindings/broadband_landline_binding.dart';
+import '../modules/broadband_landline/views/broadband_landline_view.dart';
+import '../modules/cable_tv/bindings/cable_tv_binding.dart';
+import '../modules/cable_tv/views/cable_tv_view.dart';
 import '../modules/credit_card_repayment/bindings/credit_card_repayment_binding.dart';
 import '../modules/credit_card_repayment/views/credit_card_repayment_view.dart';
 import '../modules/creditlineonupi/bindings/creditlineonupi_binding.dart';
@@ -26,6 +32,8 @@ import '../modules/debitandcreditcards/bindings/debitandcreditcards_binding.dart
 import '../modules/debitandcreditcards/views/debitandcreditcards_view.dart';
 import '../modules/dth/bindings/dth_binding.dart';
 import '../modules/dth/views/dth_view.dart';
+import '../modules/electricity/bindings/electricity_binding.dart';
+import '../modules/electricity/views/electricity_view.dart';
 import '../modules/fastag_recharge/bindings/fastag_recharge_binding.dart';
 import '../modules/fastag_recharge/views/fastag_recharge_view.dart';
 import '../modules/financialDetails/bindings/financial_details_binding.dart';
@@ -46,6 +54,8 @@ import '../modules/mutualfundloan/bindings/mutualfundloan_binding.dart';
 import '../modules/mutualfundloan/views/mutualfundloan_view.dart';
 import '../modules/otpVerification/bindings/otp_verification_binding.dart';
 import '../modules/otpVerification/views/otp_verification_view.dart';
+import '../modules/postpaid/bindings/postpaid_binding.dart';
+import '../modules/postpaid/views/postpaid_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/profileDetails/bindings/profile_details_binding.dart';
@@ -56,6 +66,10 @@ import '../modules/purchases/bindings/purchases_binding.dart';
 import '../modules/purchases/views/purchases_view.dart';
 import '../modules/qr_code_scanner/bindings/qr_code_scanner_binding.dart';
 import '../modules/qr_code_scanner/views/qr_code_scanner_view.dart';
+import '../modules/questionnaire/bindings/questionnaire_binding.dart';
+import '../modules/questionnaire/views/questionnaire_view.dart';
+import '../modules/rent/bindings/rent_binding.dart';
+import '../modules/rent/views/rent_view.dart';
 import '../modules/questionnaire/bindings/questionnaire_binding.dart';
 import '../modules/questionnaire/views/questionnaire_view.dart';
 import '../modules/receivemoney/bindings/receivemoney_binding.dart';
@@ -80,6 +94,11 @@ import '../modules/transit_and_food/bindings/transit_and_food_binding.dart';
 import '../modules/transit_and_food/views/transit_and_food_view.dart';
 import '../modules/travel/bindings/travel_binding.dart';
 import '../modules/travel/views/travel_view.dart';
+import '../modules/water/bindings/water_binding.dart';
+import '../modules/water/views/water_view.dart';
+
+// import '../modules/piped_gas/bindings/piped_gas_binding.dart';
+// import '../modules/piped_gas/views/piped_gas_view.dart';
 import '../modules/upilite/bindings/upilite_binding.dart';
 import '../modules/upilite/views/upilite_view.dart';
 import '../modules/upisettings/bindings/upisettings_binding.dart';
@@ -209,6 +228,25 @@ class AppPages {
       binding: FastagRechargeBinding(),
     ),
     GetPage(
+      name: _Paths.SCANNED_PAYMENT_DETAILS,
+      page: () => const ScannedPaymentDetailsView(
+        contactName: '',
+      ),
+      binding: ScannedPaymentDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.TO_MOBILE_NO,
+      page: () => ToMobileNoView(),
+      binding: ToMobileNoBinding(),
+    ),
+    GetPage(
+      name: _Paths.TO_MOBILE_NUM_PAYMENT_DETAILS,
+      page: () => const ToMobileNumPaymentDetailsView(
+        contactName: '',
+      ),
+      binding: ToMobileNumPaymentDetailsBinding(),
+    ),
+    GetPage(
       name: _Paths.DTH,
       page: () => const DthView(),
       binding: DthBinding(),
@@ -282,6 +320,36 @@ class AppPages {
       name: _Paths.UPISETTINGS,
       page: () => const UpisettingsView(),
       binding: UpisettingsBinding(),
+    ),
+    GetPage(
+      name: _Paths.CABLE_TV,
+      page: () => const CableTvView(),
+      binding: CableTvBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOOK_A_CYLINDER,
+      page: () => const BookACylinderView(),
+      binding: BookACylinderBinding(),
+    ),
+    GetPage(
+      name: _Paths.BROADBAND_LANDLINE,
+      page: () => BroadbandLandlineView(),
+      binding: BroadbandLandlineBinding(),
+    ),
+    GetPage(
+      name: _Paths.POSTPAID,
+      page: () => const PostpaidView(),
+      binding: PostpaidBinding(),
+    ),
+    GetPage(
+      name: _Paths.WATER,
+      page: () => WaterView(),
+      binding: WaterBinding(),
+    ),
+    GetPage(
+      name: _Paths.ELECTRICITY,
+      page: () =>  ElectricityView(),
+      binding: ElectricityBinding(),
     ),
   ];
 }

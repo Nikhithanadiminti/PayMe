@@ -118,11 +118,11 @@ class D2hView extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero
                 ),
-                backgroundColor:Colors.blueGrey.withOpacity(0.1) ),
+              backgroundColor: Colors.blueGrey,),
             onPressed: (){
             }, child: Text(
           "CONFIRM",
-          style: TextStyle(color: Colors.black12.withOpacity(0.3),fontWeight: FontWeight.w800),
+          style: TextStyle(color: Colors.white,fontWeight: FontWeight.w800),
         )),
       ),
     );

@@ -47,6 +47,10 @@ abstract class Routes {
   static const PIPED_GAS = _Paths.PIPED_GAS;
   static const CABLE_TV = _Paths.CABLE_TV;
   static const BOOK_A_CYLINDER = _Paths.BOOK_A_CYLINDER;
+  static const BROADBAND_LANDLINE = _Paths.BROADBAND_LANDLINE;
+  static const POSTPAID = _Paths.POSTPAID;
+  static const WATER = _Paths.WATER;
+  static const ELECTRICITY = _Paths.ELECTRICITY;
 }
 
 abstract class _Paths {
@@ -101,4 +105,8 @@ abstract class _Paths {
   static const CREDITSCORE = '/creditscore';
   static const CABLE_TV = '/cable-tv';
   static const BOOK_A_CYLINDER = '/book-a-cylinder';
+  static const BROADBAND_LANDLINE = '/broadband-landline';
+  static const POSTPAID = '/postpaid';
+  static const WATER = '/water';
+  static const ELECTRICITY = '/electricity';
 }

@@ -10,6 +10,8 @@ import '../modules/bills_and_recharges/bindings/bills_and_recharges_binding.dart
 import '../modules/bills_and_recharges/views/bills_and_recharges_view.dart';
 import '../modules/book_a_cylinder/bindings/book_a_cylinder_binding.dart';
 import '../modules/book_a_cylinder/views/book_a_cylinder_view.dart';
+import '../modules/broadband_landline/bindings/broadband_landline_binding.dart';
+import '../modules/broadband_landline/views/broadband_landline_view.dart';
 import '../modules/cable_tv/bindings/cable_tv_binding.dart';
 import '../modules/cable_tv/views/cable_tv_view.dart';
 import '../modules/credit_card_repayment/bindings/credit_card_repayment_binding.dart';
@@ -18,6 +20,8 @@ import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
 import '../modules/dth/bindings/dth_binding.dart';
 import '../modules/dth/views/dth_view.dart';
+import '../modules/electricity/bindings/electricity_binding.dart';
+import '../modules/electricity/views/electricity_view.dart';
 import '../modules/fastag_recharge/bindings/fastag_recharge_binding.dart';
 import '../modules/fastag_recharge/views/fastag_recharge_view.dart';
 import '../modules/financialDetails/bindings/financial_details_binding.dart';
@@ -30,8 +34,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/otpVerification/bindings/otp_verification_binding.dart';
 import '../modules/otpVerification/views/otp_verification_view.dart';
-// import '../modules/piped_gas/bindings/piped_gas_binding.dart';
-// import '../modules/piped_gas/views/piped_gas_view.dart';
+import '../modules/postpaid/bindings/postpaid_binding.dart';
+import '../modules/postpaid/views/postpaid_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/profileDetails/bindings/profile_details_binding.dart';
@@ -42,20 +46,25 @@ import '../modules/purchases/bindings/purchases_binding.dart';
 import '../modules/purchases/views/purchases_view.dart';
 import '../modules/qr_code_scanner/bindings/qr_code_scanner_binding.dart';
 import '../modules/qr_code_scanner/views/qr_code_scanner_view.dart';
+import '../modules/questionnaire/bindings/questionnaire_binding.dart';
+import '../modules/questionnaire/views/questionnaire_view.dart';
+import '../modules/rent/bindings/rent_binding.dart';
+import '../modules/rent/views/rent_view.dart';
 import '../modules/scanned_payment_details/bindings/scanned_payment_details_binding.dart';
 import '../modules/scanned_payment_details/views/scanned_payment_details_view.dart';
 import '../modules/to_mobile_no/bindings/to_mobile_no_binding.dart';
 import '../modules/to_mobile_no/views/to_mobile_no_view.dart';
 import '../modules/to_mobile_num_payment_details/bindings/to_mobile_num_payment_details_binding.dart';
 import '../modules/to_mobile_num_payment_details/views/to_mobile_num_payment_details_view.dart';
-import '../modules/questionnaire/bindings/questionnaire_binding.dart';
-import '../modules/questionnaire/views/questionnaire_view.dart';
-import '../modules/rent/bindings/rent_binding.dart';
-import '../modules/rent/views/rent_view.dart';
 import '../modules/transit_and_food/bindings/transit_and_food_binding.dart';
 import '../modules/transit_and_food/views/transit_and_food_view.dart';
 import '../modules/travel/bindings/travel_binding.dart';
 import '../modules/travel/views/travel_view.dart';
+import '../modules/water/bindings/water_binding.dart';
+import '../modules/water/views/water_view.dart';
+
+// import '../modules/piped_gas/bindings/piped_gas_binding.dart';
+// import '../modules/piped_gas/views/piped_gas_view.dart';
 
 part 'app_routes.dart';
 
@@ -184,12 +193,14 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.TO_MOBILE_NO,
-      page: () =>  ToMobileNoView(),
+      page: () => ToMobileNoView(),
       binding: ToMobileNoBinding(),
     ),
     GetPage(
       name: _Paths.TO_MOBILE_NUM_PAYMENT_DETAILS,
-      page: () => const ToMobileNumPaymentDetailsView(contactName: '',),
+      page: () => const ToMobileNumPaymentDetailsView(
+        contactName: '',
+      ),
       binding: ToMobileNumPaymentDetailsBinding(),
     ),
     GetPage(
@@ -211,6 +222,26 @@ class AppPages {
       name: _Paths.BOOK_A_CYLINDER,
       page: () => const BookACylinderView(),
       binding: BookACylinderBinding(),
+    ),
+    GetPage(
+      name: _Paths.BROADBAND_LANDLINE,
+      page: () => BroadbandLandlineView(),
+      binding: BroadbandLandlineBinding(),
+    ),
+    GetPage(
+      name: _Paths.POSTPAID,
+      page: () => const PostpaidView(),
+      binding: PostpaidBinding(),
+    ),
+    GetPage(
+      name: _Paths.WATER,
+      page: () => WaterView(),
+      binding: WaterBinding(),
+    ),
+    GetPage(
+      name: _Paths.ELECTRICITY,
+      page: () =>  ElectricityView(),
+      binding: ElectricityBinding(),
     ),
   ];
 }

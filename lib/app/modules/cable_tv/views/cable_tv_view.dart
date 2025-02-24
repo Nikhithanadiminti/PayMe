@@ -70,7 +70,6 @@ Widget _buildAllOperators() {
     {"logo": "assets/images/icici logo.png", "name": "Amrita Cable Network"},
     {"logo": "assets/images/idbi bank.jpg", "name": "BCN Digital"},
     {"logo": "assets/images/indian bank logo.png", "name": "Bapi Electric and Cable Network"},
-    {"logo": "assets/images/indian bank logo.png", "name": "Bapi Electric and Cable Network"},
     {"logo": "assets/images/indian bank logo.png", "name": "CCNDS CABLE"},
     {"logo": "assets/images/indian bank logo.png", "name": "Cochin Cable Vision"},
     {"logo": "assets/images/indian bank logo.png", "name": "Deetech Cable Network"},

@@ -1,18 +1,18 @@
+import 'package:demo_project/app/modules/broadband_landline/views/broadband_landline_view.dart';
 import 'package:demo_project/app/modules/credit_card_repayment/views/credit_card_repayment_view.dart';
 import 'package:demo_project/app/modules/loan_repayment/views/loan_repayment_view.dart';
 import 'package:demo_project/app/modules/mobile_recharge/views/mobile_recharge_view.dart';
+import 'package:demo_project/app/modules/postpaid/views/postpaid_view.dart';
 import 'package:demo_project/app/modules/rent/views/rent_view.dart';
+import 'package:demo_project/app/modules/water/views/water_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../book_a_cylinder/views/book_a_cylinder_view.dart';
 import '../../cable_tv/views/cable_tv_view.dart';
 import '../../dth/views/dth_view.dart';
+import '../../electricity/views/electricity_view.dart';
 import '../../fastag_recharge/views/fastag_recharge_view.dart';
 import '../../piped_gas/views/piped_gas_view.dart';
-// import '../../piped_gas/views/piped_gas_view.dart';
-import '../../rent/views/broker_payment.dart';
-import '../../rent/views/property_deposit.dart';
-import '../../rent/views/society_maintenance.dart';
 import '../controllers/bills_and_recharges_controller.dart';
 
 class BillsAndRechargesView extends GetView<BillsAndRechargesController> {
@@ -172,16 +172,20 @@ class BillsAndRechargesView extends GetView<BillsAndRechargesController> {
                         _buildOption(icon: Icons.gas_meter, label: "Piped Gas",
                            onTap: ()=> Get.to(()=> PipedGasView()),
                         ),
-                        _buildOption(icon: Icons.water_drop, label: "Water"),
-                        _buildOption(icon: Icons.electric_bolt, label: "Electricity"),
+                        _buildOption(icon: Icons.water_drop, label: "Water",
+                        onTap: ()=>Get.to(()=>WaterView())),
+                        _buildOption(icon: Icons.electric_bolt, label: "Electricity",
+                        onTap: ()=> Get.to(()=>ElectricityView())),
                       ],
                     ),
                     const SizedBox(height: 16),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildOption(icon: Icons.phone_android, label: "PostPaid"),
-                        _buildOption(icon: Icons.wifi, label: "Broadband \nLandline"),
+                        _buildOption(icon: Icons.phone_android, label: "PostPaid",
+                      onTap: () => Get.to(()=> PostpaidView()),),
+                        _buildOption(icon: Icons.wifi, label: "Broadband \nLandline",
+                          onTap: () => Get.to(()=> BroadbandLandlineView()),),
                         _buildOption(icon: Icons.credit_card, label: "Credit Card\nPayment",
                           onTap: () => Get.to(() => CreditCardRepaymentView()),),
                         _buildOption(icon: Icons.local_gas_station, label: "Book a\nCylinder",
